@@ -1,0 +1,30 @@
+Ecommerce Website : 
+Single Vendor:
+	Website
+		Home
+		Product Category
+		Product Detail Page
+		Shopping Cart Page
+		Checkout Page
+		Login/SignUp page
+		
+	Customers Panel
+		Secure Login System
+		Customer Dashboard
+		Customer all Order
+		Customer Profile
+		Change Password
+		Individual Order status
+	Admin Panel
+		Secure Login System
+		Category Module
+		Sub Category Module
+		Brand Module
+		Unit Module
+		Product Module
+		Order Module
+		Customer Module
+		User Module
+		
+Multi Vendor:
+	
