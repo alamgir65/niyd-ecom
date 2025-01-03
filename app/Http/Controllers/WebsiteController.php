@@ -15,5 +15,12 @@ class WebsiteController extends Controller
     public function productDetails(){
         return view('website.product.detail');
     }
+    public function contact(){
+        return view('website.home.contact');
+    }
+    public function about(){
+        return view('website.home.about');
+    }
+
 }
 

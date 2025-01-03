@@ -147,7 +147,7 @@
 
                                 <div class="mini_cart_footer">
                                     <div class="cart_button">
-                                        <a href="cart.html">View cart</a>
+                                        <a href="{{route('cart.index')}}">View cart</a>
                                         <a href="checkout.html">Checkout</a>
                                     </div>
                                 </div>
@@ -171,9 +171,9 @@
                         <nav>
                             <ul>
 
-                                <li class="active"><a  href="index.html"><i class="zmdi zmdi-home"></i> home <i class="zmdi zmdi-caret-down"></i></a>
+                                <li class="active"><a  href="{{route('home')}}"><i class="zmdi zmdi-home"></i> home <i class="zmdi zmdi-caret-down"></i></a>
                                     <ul class="sub_menu">
-                                        <li><a href="index.html">Home 1</a></li>
+                                        <li><a href="{{route('home')}}">Home 1</a></li>
                                         <li><a href="index-2.html">Home 2</a></li>
                                         <li><a href="index-3.html">Home 3</a></li>
                                         <li><a href="index-4.html">Home 4</a></li>
@@ -183,7 +183,7 @@
                                         <li><a href="index-8.html">Home 8</a></li>
                                     </ul>
                                 </li>
-                                <li class="mega_items"><a href="shop.html"><i class="zmdi zmdi-shopping-basket"></i> shop <i class="zmdi zmdi-caret-down"></i></a>
+                                <li class="mega_items"><a href="{{route('product.index')}}"><i class="zmdi zmdi-shopping-basket"></i> shop <i class="zmdi zmdi-caret-down"></i></a>
                                     <div class="mega_menu">
                                         <ul class="mega_menu_inner">
                                             <li><a href="#">Shop Layouts</a>
@@ -197,7 +197,7 @@
                                             </li>
                                             <li><a href="#">other Pages</a>
                                                 <ul>
-                                                    <li><a href="cart.html">cart</a></li>
+                                                    <li><a href="{{route('cart.index')}}">cart</a></li>
                                                     <li><a href="wishlist.html">Wishlist</a></li>
                                                     <li><a href="checkout.html">Checkout</a></li>
                                                     <li><a href="my-account.html">my account</a></li>
@@ -216,7 +216,7 @@
                                         </ul>
                                     </div>
                                 </li>
-                                <li><a href="blog.html"><i class="zmdi zmdi-collection-music"></i> blog <i class="zmdi zmdi-caret-down"></i></a>
+                                <li><a href="{{route('blog.index')}}"><i class="zmdi zmdi-collection-music"></i> blog <i class="zmdi zmdi-caret-down"></i></a>
                                     <ul class="sub_menu pages">
                                         <li><a href="blog-details.html">blog details</a></li>
                                         <li><a href="blog-fullwidth.html">blog fullwidth</a></li>
@@ -225,19 +225,19 @@
                                 </li>
                                 <li><a href="#"><i class="zmdi zmdi-star"></i> pages <i class="zmdi zmdi-caret-down"></i></a>
                                     <ul class="sub_menu pages">
-                                        <li><a href="about.html">About Us</a></li>
+                                        <li><a href="{{route('about')}}">About Us</a></li>
                                         <li><a href="services.html">services</a></li>
                                         <li><a href="portfolio.html">portfolio</a></li>
                                         <li><a href="faq.html">Frequently Questions</a></li>
-                                        <li><a href="contact.html">contact</a></li>
-                                        <li><a href="login.html">login</a></li>
+                                        <li><a href="{{route('contact')}}">contact</a></li>
+                                        <li><a href="{{route('customer.login-register')}}">login</a></li>
                                         <li><a href="wishlist.html">Wishlist</a></li>
                                         <li><a href="404.html">Error 404</a></li>
                                     </ul>
                                 </li>
 
-                                <li><a href="about.html"><i class="zmdi zmdi-comments"></i> about Us</a></li>
-                                <li><a href="contact.html"><i class="zmdi zmdi-account-box-mail"></i>  Contact Us</a></li>
+                                <li><a href="{{route('about')}}"><i class="zmdi zmdi-comments"></i> about Us</a></li>
+                                <li><a href="{{route('contact')}}"><i class="zmdi zmdi-account-box-mail"></i>  Contact Us</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -290,7 +290,7 @@
                                 <ul class="dropdown_links">
                                     <li><a href="checkout.html">Checkout </a></li>
                                     <li><a href="my-account.html">My Account </a></li>
-                                    <li><a href="cart.html">Shopping Cart</a></li>
+                                    <li><a href="{{route('cart.index')}}">Shopping Cart</a></li>
                                     <li><a href="wishlist.html">Wishlist</a></li>
                                 </ul>
                             </li>
@@ -366,7 +366,7 @@
 
                             <div class="mini_cart_footer">
                                 <div class="cart_button">
-                                    <a href="cart.html">View cart</a>
+                                    <a href="{{route('cart.index')}}">View cart</a>
                                     <a href="checkout.html">Checkout</a>
                                 </div>
                             </div>
@@ -377,9 +377,9 @@
                     <div id="menu" class="text-left ">
                         <ul class="offcanvas_main_menu">
                             <li class="menu-item-has-children active">
-                                <a href="#">Home</a>
+                                <a href="{{route('home')}}">Home</a>
                                 <ul class="sub-menu">
-                                    <li><a href="index.html">Home 1</a></li>
+                                    <li><a href="{{route('home')}}">Home 1</a></li>
                                     <li><a href="index-2.html">Home 2</a></li>
                                     <li><a href="index-3.html">Home 3</a></li>
                                     <li><a href="index-4.html">Home 4</a></li>
@@ -405,7 +405,7 @@
                                     <li class="menu-item-has-children">
                                         <a href="#">other Pages</a>
                                         <ul class="sub-menu">
-                                            <li><a href="cart.html">cart</a></li>
+                                            <li><a href="{{route('cart.index')}}">cart</a></li>
                                             <li><a href="wishlist.html">Wishlist</a></li>
                                             <li><a href="checkout.html">Checkout</a></li>
                                             <li><a href="my-account.html">my account</a></li>
@@ -426,7 +426,7 @@
                             <li class="menu-item-has-children">
                                 <a href="#">blog</a>
                                 <ul class="sub-menu">
-                                    <li><a href="blog.html">blog</a></li>
+                                    <li><a href="{{route('blog.index')}}">blog</a></li>
                                     <li><a href="blog-details.html">blog details</a></li>
                                     <li><a href="blog-fullwidth.html">blog fullwidth</a></li>
                                     <li><a href="blog-sidebar.html">blog sidebar</a></li>
@@ -436,12 +436,12 @@
                             <li class="menu-item-has-children">
                                 <a href="#">pages </a>
                                 <ul class="sub-menu">
-                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="{{route('about')}}">About Us</a></li>
                                     <li><a href="services.html">services</a></li>
                                     <li><a href="portfolio.html">portfolio</a></li>
                                     <li><a href="faq.html">Frequently Questions</a></li>
-                                    <li><a href="contact.html">contact</a></li>
-                                    <li><a href="login.html">login</a></li>
+                                    <li><a href="{{route('contact')}}">contact</a></li>
+                                    <li><a href="{{route('customer.login-register')}}">login</a></li>
                                     <li><a href="wishlist.html">Wishlist</a></li>
                                     <li><a href="404.html">Error 404</a></li>
                                 </ul>
@@ -450,10 +450,10 @@
                                 <a href="my-account.html">my account</a>
                             </li>
                             <li class="menu-item-has-children">
-                                <a href="about.html">about Us</a>
+                                <a href="{{route('about')}}">about Us</a>
                             </li>
                             <li class="menu-item-has-children">
-                                <a href="contact.html"> Contact Us</a>
+                                <a href="{{route('contact')}}"> Contact Us</a>
                             </li>
                         </ul>
                     </div>
@@ -484,7 +484,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-5">
                     <div class="widgets_container contact_us">
-                        <a href="index.html"><img src="{{asset('/')}}website/img/logo/logo.png" alt=""></a>
+                        <a href="{{route('home')}}"><img src="{{asset('/')}}website/img/logo/logo.png" alt=""></a>
                         <div class="footer_contact">
                             <ul>
                                 <li><i class="zmdi zmdi-home"></i><span>Addresss:</span> 2 Fauconberg Rd,Chiswick, London</li>
@@ -533,7 +533,7 @@
                                         <li><a href="#"> Secure Shopping</a></li>
                                         <li><a href="#">International Shipping</a></li>
                                         <li><a href="#"> Affiliates</a></li>
-                                        <li><a href="contact.html"> Contact</a></li>
+                                        <li><a href="{{route('contact')}}"> Contact</a></li>
                                         <li><a href="#"> Travel</a></li>
                                         <li><a href="#">ecommerce</a></li>
                                         <li><a href="#"> Creative</a></li>
@@ -546,11 +546,11 @@
                                 <h3>Information</h3>
                                 <div class="footer_menu">
                                     <ul>
-                                        <li><a href="about.html">About Us</a></li>
+                                        <li><a href="{{route('about')}}">About Us</a></li>
                                         <li><a href="#">Delivery infomation</a></li>
                                         <li><a href="#">Privacy Policy</a></li>
                                         <li><a href="#"> Travel</a></li>
-                                        <li><a href="blog.html">Blog</a></li>
+                                        <li><a href="{{route('blog.index')}}">Blog</a></li>
                                         <li><a href="#">Portfolio</a></li>
                                         <li><a href="#">Conditions</a></li>
                                         <li><a href="#"> Frequently Questions</a></li>

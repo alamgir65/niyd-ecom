@@ -1,7 +1,7 @@
 @extends('website.master')
 
 @section('title')
-    Customer-account
+    Contact-us
 @endsection
 
 
@@ -16,7 +16,7 @@
                     <div class="breadcrumb_content">
                         <ul>
                             <li><a href="index.html">home</a></li>
-                            <li>login</li>
+                            <li>contact us</li>
                         </ul>
                     </div>
                 </div>
@@ -25,63 +25,68 @@
     </div>
     <!--breadcrumbs area end-->
 
-
-    <!-- customer login start -->
-    <div class="customer_login mt-60">
+    <!--contact map start-->
+    <div class="contact_map mt-60">
         <div class="container">
             <div class="row">
-                <!--login area start-->
-                <div class="col-lg-6 col-md-6">
-                    <div class="account_form">
-                        <h2>login</h2>
-                        <form action="#">
-                            <p>
-                                <label>Username or email <span>*</span></label>
-                                <input type="text">
-                            </p>
-                            <p>
-                                <label>Passwords <span>*</span></label>
-                                <input type="password">
-                            </p>
-                            <div class="login_submit">
-                                <a href="#">Lost your password?</a>
-                                <label for="remember">
-                                    <input id="remember" type="checkbox">
-                                    Remember me
-                                </label>
-                                <button type="submit">login</button>
-
-                            </div>
-
-                        </form>
+                <div class="col-12">
+                    <div class="map-area">
+                        <div id="googleMap"></div>
                     </div>
                 </div>
-                <!--login area start-->
-
-                <!--register area start-->
-                <div class="col-lg-6 col-md-6">
-                    <div class="account_form register">
-                        <h2>Register</h2>
-                        <form action="#">
-                            <p>
-                                <label>Email address  <span>*</span></label>
-                                <input type="text">
-                            </p>
-                            <p>
-                                <label>Passwords <span>*</span></label>
-                                <input type="password">
-                            </p>
-                            <div class="login_submit">
-                                <button type="submit">Register</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <!--register area end-->
             </div>
         </div>
     </div>
-    <!-- customer login end -->
+    <!--contact map end-->
+
+    <!--contact area start-->
+    <div class="contact_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="contact_message content">
+                        <h3>contact us</h3>
+                        <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram anteposuerit litterarum formas human. qui sequitur mutationem consuetudium lectorum. Mirum est notare</p>
+                        <ul>
+                            <li><i class="fa fa-fax"></i>  Address : No 40 Baria Sreet 133/2 NewYork City</li>
+                            <li><i class="fa fa-phone"></i> <a href="#">Infor@roadthemes.com</a></li>
+                            <li><i class="fa fa-envelope-o"></i> 0(1234) 567 890</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="contact_message form">
+                        <h3>Tell us your project</h3>
+                        <form id="contact-form" method="POST"  action="https://htmldemo.net/pallas/pallas/assets/mail.php">
+                            <p>
+                                <label> Your Name (required)</label>
+                                <input name="name" placeholder="Name *" type="text">
+                            </p>
+                            <p>
+                                <label>  Your Email (required)</label>
+                                <input name="email" placeholder="Email *" type="email">
+                            </p>
+                            <p>
+                                <label>  Subject</label>
+                                <input name="subject" placeholder="Subject *" type="text">
+                            </p>
+                            <div class="contact_textarea">
+                                <label>  Your Message</label>
+                                <textarea placeholder="Message *" name="message"  class="form-control2" ></textarea>
+                            </div>
+                            <button type="submit"> Send</button>
+                            <p class="form-messege"></p>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--contact area end-->
+
+
 
     <!--brand newsletter area start-->
     <div class="brand_newsletter_area">
@@ -127,6 +132,7 @@
         </div>
     </div>
     <!--brand area end-->
+
 
 
 @endsection
