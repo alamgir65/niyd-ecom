@@ -57,11 +57,12 @@ For using jetstream :
     composer require laravel/jetstream
     php artisan jetstream:install livewire
 
-
+-----------------------
+For got server for my project ( php artisan serve)
 
 All change in Template :
 -----------------------
-
+../../assets/       ---> {{asset('/')}}admin/assets/
 index.html      	--->    {{route('home')}}
 assets/         	--->    {{asset('/')}}website/
 cart.html       	--->    {{route('cart.index')}}
