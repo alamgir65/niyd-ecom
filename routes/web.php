@@ -27,7 +27,8 @@ Route::get('/product',[ProductController::class,'index'])->name('product.index')
 
 Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',])->group(function () {
     Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard');
-
+    Route::get('/category/index',[CategoryController::class,'index'])->name('category.index');
+    Route::get('/category/create',[CategoryController::class,'creates'])->name('category.create');
 });
 
 
