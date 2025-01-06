@@ -1,4 +1,4 @@
-Ecommerce Website : 
+Ecommerce Website :
 Single Vendor:
 	Website
 		Home
@@ -7,7 +7,7 @@ Single Vendor:
 		Shopping Cart Page
 		Checkout Page
 		Login/SignUp page
-		
+
 	Customers Panel
 		Secure Login System
 		Customer Dashboard
@@ -25,6 +25,51 @@ Single Vendor:
 		Order Module
 		Customer Module
 		User Module
-		
+
 Multi Vendor:
-	
+
+
+
+
+For all Views file:
+-------------------
+
+@extends('website.master')
+@section('title')
+    about-us
+@endsection
+
+@section('body')
+
+
+@endsection
+
+-------------------
+
+# Package
+    Class, config, route, view file
+ * Laravel
+    jetstream
+
+
+-----------------
+For using jetstream :
+    composer require laravel/jetstream
+    php artisan jetstream:install livewire
+
+
+
+All change in Template :
+-----------------------
+
+index.html      	--->    {{route('home')}}
+assets/         	--->    {{asset('/')}}website/
+cart.html       	--->    {{route('cart.index')}}
+checkout.html   	--->    {{route('checkout.index')}}
+shop-fullwidth.html  	--->    {{route('product.category')}}
+product-details.html    --->	{{route('product-details')}}
+contact.html       	--->	{{route('contact')}}
+about.html		--->	{{route('about')}}
+login.html		--->	{{route('customer.login-register')}}
+blog.html		--->	{{route('blog.index')}}
+shop.html		--->	{{route('product.index')}}
