@@ -12,7 +12,8 @@
             <h5 class="mb-0">Add Sub Category Form</h5> <small class="text-muted float-end">Default label</small>
         </div>
         <div class="card-body">
-            <form>
+            <form method="post" action="" enctype="multipart/form-data">
+                @csrf
                 <div class="row mb-4">
                     <label class="col-sm-2 col-form-label" for="basic-default-name">Sub Category Name</label>
                     <div class="col-sm-10">

@@ -28,8 +28,13 @@ Route::get('/all-blogs',[BlogController::class,'index'])->name('blog.index');
 
 Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',])->group(function () {
     Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard');
+
     Route::get('/category/index',[CategoryController::class,'index'])->name('category.index');
     Route::get('/category/create',[CategoryController::class,'creates'])->name('category.create');
+    Route::post('/category/store',[CategoryController::class,'store'])->name('category.store');
+    Route::get('/category/edit/{id}',[CategoryController::class,'edit'])->name('category.edit');
+    Route::post('/category/update/{id}',[CategoryController::class,'updateCategory'])->name('category.update');
+    Route::get('/category/delete/{id}',[CategoryController::class,'deleteCategory'])->name('category.delete');
 
     Route::get('/add-subcategory',[SubCategoryController::class,'create'])->name('subcategory.create');
     Route::get('/manage-subcategory',[SubCategoryController::class,'index'])->name('subcategory.index');
