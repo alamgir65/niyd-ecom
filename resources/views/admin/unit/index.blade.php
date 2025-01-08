@@ -1,6 +1,10 @@
 @extends('admin.master')
+@section('title')
+    manage-unit
+@endsection
 
 @section('body')
+
     <div class="row">
         <div class="col">
             <!-- DataTable with Buttons -->
@@ -97,4 +101,5 @@
             <!--/ DataTable with Buttons -->
         </div>
     </div>
+
 @endsection

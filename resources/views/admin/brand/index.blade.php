@@ -10,8 +10,8 @@
                         <thead>
                         <tr>
                             <th>Sl</th>
-                            <th>Name</th>
-                            <th>Description</th>
+                            <th>Brand Name</th>
+                            <th>Brand Description</th>
                             <th>Image</th>
                             <th>Status</th>
                             <th>Action</th>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 
+
 <html lang="en" class="light-style layout-navbar-fixed layout-menu-fixed layout-compact " dir="ltr" data-theme="theme-default" data-assets-path="{{asset('/')}}admin/assets/" data-template="vertical-menu-template" data-style="light">
 
 
@@ -7,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-    <title>Admin | @yield('title')</title>
+    <title>Dashboard - Analytics | Materio - Bootstrap Material Design Admin Template</title>
 
 
     <meta name="description" content="" />
@@ -43,6 +44,14 @@
     <!-- Page CSS -->
 
 
+    <link rel="stylesheet" href="{{asset('/')}}admin/assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css">
+    <link rel="stylesheet" href="{{asset('/')}}admin/assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css">
+    <link rel="stylesheet" href="{{asset('/')}}admin/assets/vendor/libs/datatables-checkboxes-jquery/datatables.checkboxes.css">
+    <link rel="stylesheet" href="{{asset('/')}}admin/assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css">
+    <link rel="stylesheet" href="{{asset('/')}}admin/assets/vendor/libs/flatpickr/flatpickr.css" />
+    <!-- Row Group CSS -->
+    <link rel="stylesheet" href="{{asset('/')}}admin/assets/vendor/libs/datatables-rowgroup-bs5/rowgroup.bootstrap5.css">
+
     <!-- Helpers -->
     <script src="{{asset('/')}}admin/assets/vendor/js/helpers.js"></script>
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
@@ -64,7 +73,7 @@
 <div class="layout-wrapper layout-content-navbar  ">
     <div class="layout-container">
 
-        <!--Side Menu -->
+        <!-- Menu -->
 
         <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
 
@@ -118,12 +127,12 @@
 
                     <ul class="menu-sub">
                         <li class="menu-item">
-                            <a href="{{route('category.index')}}" class="menu-link">
-                                <div>Add Category</div>
+                            <a href="{{route('category.create')}}" class="menu-link">
+                                <div >Add Category</div>
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="{{route('category.create')}}" class="menu-link">
+                            <a href="{{route('category.index')}}" class="menu-link">
                                 <div>Manage Category</div>
                             </a>
                         </li>
@@ -138,12 +147,12 @@
                     </a>
                     <ul class="menu-sub">
                         <li class="menu-item">
-                            <a href="https://demos.themeselection.com/materio-bootstrap-html-admin-template/html/front-pages/landing-page.html" class="menu-link" target="_blank">
+                            <a href="{{route('subcategory.create')}}" class="menu-link">
                                 <div>Add Sub Category</div>
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="https://demos.themeselection.com/materio-bootstrap-html-admin-template/html/front-pages/pricing-page.html" class="menu-link" target="_blank">
+                            <a href="{{route('subcategory.index')}}" class="menu-link">
                                 <div>Manage Sub Category</div>
                             </a>
                         </li>
@@ -159,12 +168,12 @@
                     </a>
                     <ul class="menu-sub">
                         <li class="menu-item">
-                            <a href="app-ecommerce-dashboard.html" class="menu-link">
+                            <a href="{{route('brand.create')}}" class="menu-link">
                                 <div>Add Brand</div>
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="app-ecommerce-dashboard.html" class="menu-link">
+                            <a href="{{route('brand.index')}}" class="menu-link">
                                 <div>Manage Brand</div>
                             </a>
                         </li>
@@ -179,12 +188,12 @@
                     </a>
                     <ul class="menu-sub">
                         <li class="menu-item">
-                            <a href="app-academy-dashboard.html" class="menu-link">
+                            <a href="{{route('unit.create')}}" class="menu-link">
                                 <div>Add Unit</div>
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="app-academy-course.html" class="menu-link">
+                            <a href="{{route('unit.index')}}" class="menu-link">
                                 <div>Manage Unit</div>
                             </a>
                         </li>
@@ -198,12 +207,12 @@
                     </a>
                     <ul class="menu-sub">
                         <li class="menu-item">
-                            <a href="app-logistics-dashboard.html" class="menu-link">
+                            <a href="{{route('product.create')}}" class="menu-link">
                                 <div>Add Product</div>
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="app-logistics-fleet.html" class="menu-link">
+                            <a href="{{route('product.index')}}" class="menu-link">
                                 <div>Manage Product</div>
                             </a>
                         </li>
@@ -263,9 +272,11 @@
             </ul>
 
 
-        </aside>
 
+        </aside>
         <!-- / Menu -->
+
+
 
         <!-- Layout container -->
         <div class="layout-page">
@@ -273,13 +284,16 @@
 
             <nav class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme" id="layout-navbar">
 
+
                 <div class="layout-menu-toggle navbar-nav align-items-xl-center me-4 me-xl-0   d-xl-none ">
                     <a class="nav-item nav-link px-0 me-xl-6" href="javascript:void(0)">
                         <i class="ri-menu-fill ri-24px"></i>
                     </a>
                 </div>
 
+
                 <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+
 
                     <!-- Search -->
                     <div class="navbar-nav align-items-center">
@@ -291,6 +305,10 @@
                         </div>
                     </div>
                     <!-- /Search -->
+
+
+
+
 
                     <ul class="navbar-nav flex-row align-items-center ms-auto">
 
@@ -695,7 +713,7 @@
                                             <small class="align-middle">Logout</small>
                                             <i class="ri-logout-box-r-line ms-2 ri-16px"></i>
                                         </a>
-                                        <form action="{{route('logout')}}" id="logoutForm" method="post">
+                                        <form id="logoutForm" action="{{route('logout')}}" method="Post">
                                             @csrf
                                         </form>
                                     </div>
@@ -725,7 +743,14 @@
             <!-- Content wrapper -->
             <div class="content-wrapper">
 
-                @yield('body')
+                <!-- Content -->
+
+                <div class="container-xxl flex-grow-1 container-p-y">
+
+                    @yield('body')
+
+                </div>
+                <!-- / Content -->
 
                 <!-- Footer -->
                 <footer class="content-footer footer bg-footer-theme">
@@ -761,11 +786,8 @@
         <!-- / Layout page -->
     </div>
 
-
-
     <!-- Overlay -->
     <div class="layout-overlay layout-menu-toggle"></div>
-
 
     <!-- Drag Target Area To SlideIn Menu On Small Screens -->
     <div class="drag-target"></div>
@@ -793,12 +815,14 @@
 <!-- Main JS -->
 <script src="{{asset('/')}}admin/assets/js/main.js"></script>
 
-
 <!-- Page JS -->
 <script src="{{asset('/')}}admin/assets/js/dashboards-analytics.js"></script>
+<script src="{{asset('/')}}admin/assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
+
+<script src="{{asset('/')}}admin/assets/js/tables-datatables-basic.js"></script>
 
 </body>
 
 </html>
 
-
+<!-- beautify ignore:end -->
