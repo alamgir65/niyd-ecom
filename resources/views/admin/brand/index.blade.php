@@ -42,6 +42,7 @@
                 </div>
             </div>
             <!-- Modal to add new record -->
+{{--            add dewar r kichu nai --}}
         </div>
     </div>
 @endsection
