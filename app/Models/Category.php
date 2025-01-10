@@ -28,6 +28,7 @@ class Category extends Model
         self::$category = Category::find($id);
 
         if($request->file('image')){
+            unlink(self::$category->image);
             self::$imageUrl = self::getImageUrl($request);
         }
         else{

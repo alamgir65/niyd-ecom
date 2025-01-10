@@ -27,7 +27,8 @@
     <!-- Icons -->
     <link rel="stylesheet" href="{{asset('/')}}admin/assets/vendor/fonts/remixicon/remixicon.css" />
     <link rel="stylesheet" href="{{asset('/')}}admin/assets/vendor/fonts/flag-icons.css" />
-
+    <!-- Font Awesome CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <!-- Menu waves for no-customizer fix -->
     <link rel="stylesheet" href="{{asset('/')}}admin/assets/vendor/libs/node-waves/node-waves.css" />
 

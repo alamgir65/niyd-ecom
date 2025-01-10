@@ -137,10 +137,10 @@
                                 </td>
                                 <td>
                                     <a href="{{route('category.edit',['id'=>$category->id])}}" class="btn btn-success btn-sm">
-                                        Edit
+                                        <i class="fa fa-edit"></i>
                                     </a>
                                     <a href="{{route('category.delete',['id'=>$category->id])}}" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure to delete this!')">
-                                        Delete
+                                        <i class="fa fa-trash"></i>
                                     </a>
                                 </td>
                             </tr>
