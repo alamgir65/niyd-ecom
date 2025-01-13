@@ -26,7 +26,7 @@
                     @foreach($subcategories as $subcategory)
                         <tr>
                             <td>{{$loop->iteration}}</td>
-                            <td>{{$subcategory->category->name}}</td>
+                            <td>{{isset($subcategory->category->name)?$subcategory->category->name : 'Category not found'}}</td>
                             <td>{{$subcategory->name}}</td>
                             <td>{{$subcategory->description}}</td>
                             <td>
