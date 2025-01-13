@@ -50,8 +50,12 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',
     Route::post('/brand/update/{id}',[BrandController::class,'update'])->name('brand.update');
     Route::get('/brand/delete/{id}',[BrandController::class,'delete'])->name('brand.delete');
 
-    Route::get('/manage-unit',[UnitController::class,'index'])->name('unit.index');
+    Route::get('/unit/index',[UnitController::class,'index'])->name('unit.index');
     Route::get('/add-unit',[UnitController::class,'create'])->name('unit.create');
+    Route::post('/unit/store',[UnitController::class,'store'])->name('unit.store');
+    Route::get('/unit/edit/{id}',[UnitController::class,'edit'])->name('unit.edit');
+    Route::post('/unit/update/{id}',[UnitController::class,'update'])->name('unit.update');
+    Route::get('/unit/delete/{id}',[UnitController::class,'delete'])->name('unit.delete');
 
     Route::get('/add-product',[ProductController::class,'create'])->name('product.create');
     Route::get('/manage-product',[ProductController::class,'index'])->name('product.index');
