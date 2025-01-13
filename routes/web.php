@@ -36,8 +36,12 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',
     Route::post('/category/update/{id}',[CategoryController::class,'updateCategory'])->name('category.update');
     Route::get('/category/delete/{id}',[CategoryController::class,'deleteCategory'])->name('category.delete');
 
-    Route::get('/add-subcategory',[SubCategoryController::class,'create'])->name('subcategory.create');
-    Route::get('/manage-subcategory',[SubCategoryController::class,'index'])->name('subcategory.index');
+    Route::get('/subcategory/create',[SubCategoryController::class,'create'])->name('subcategory.create');
+    Route::get('/subcategory/index',[SubCategoryController::class,'index'])->name('subcategory.index');
+    Route::post('/subcategory/store',[SubCategoryController::class,'store'])->name('subcategory.store');
+    Route::get('/subcategory/edit/{id}',[SubCategoryController::class,'edit'])->name('subcategory.edit');
+    Route::post('/subcategory/update/{id}',[SubCategoryController::class,'update'])->name('subcategory.update');
+    Route::get('subcategory/delete/{id}',[SubCategoryController::class,'delete'])->name('subcategory.delete');
 
     Route::get('/manage-brand',[BrandController::class,'index'])->name('brand.index');
     Route::get('/add-brand',[BrandController::class,'create'])->name('brand.create');
