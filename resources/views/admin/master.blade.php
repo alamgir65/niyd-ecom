@@ -830,6 +830,27 @@
         });
     });
 </script>
+<script>
+    function getSubCategoryByCategory($categoryId) {
+        $.ajax({
+            type: "GET",
+            url: "{{route('get-sub-category-by-category')}}",
+            data: {'id' : $categoryId},
+            DataType: 'JSON',
+            success: function (response) {
+                console.log(response);
+
+                var option = '';
+                option += '<option value="">--Select Product Sub-category--</option>';
+                $.each(response,function (key,value) {
+                    option += '<option value="'+value.id+'">'+value.name+'</option>';
+                })
+                $('#subCategory').empty();
+                $('#subCategory').append(option);
+            }
+        });
+    }
+</script>
 </body>
 
 </html>

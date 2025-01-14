@@ -57,8 +57,10 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',
     Route::post('/unit/update/{id}',[UnitController::class,'update'])->name('unit.update');
     Route::get('/unit/delete/{id}',[UnitController::class,'delete'])->name('unit.delete');
 
-    Route::get('/add-product',[ProductController::class,'create'])->name('product.create');
-    Route::get('/manage-product',[ProductController::class,'index'])->name('product.index');
+    Route::get('/product/create',[ProductController::class,'create'])->name('product.create');
+    Route::get('/getSubCategoryByCategory',[ProductController::class,'getSubCategoryByCategory'])->name('get-sub-category-by-category');
+    Route::get('/product/index',[ProductController::class,'index'])->name('product.index');
+    Route::post('/product/store',[ProductController::class,'store'])->name('product.store');
 });
 
 

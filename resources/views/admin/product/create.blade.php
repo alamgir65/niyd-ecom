@@ -9,12 +9,13 @@
                 <h5 class="mb-0">Add Product Form</h5> <small class="text-muted float-end">Default label</small>
             </div>
             <div class="card-body">
-                <form method="post" action="" enctype="multipart/form-data">
+                <span class="text-success">{{session('message')}}</span>
+                <form method="post" action="{{route('product.store')}}" enctype="multipart/form-data">
                     @csrf
                     <div class="row mb-4">
-                        <label class="col-sm-2 col-form-label" for="basic-default-name">Category</label>
+                        <label class="col-sm-2 col-form-label" for="basic-default-name" >Category</label>
                         <div class="col-sm-10">
-                            <select name="category_id" id="" class="form-control">
+                            <select name="category_id" class="form-control" onchange="getSubCategoryByCategory(this.value)">
                                 <option value="">--Select Product Category--</option>
                                 @foreach($categories as $category)
                                 <option value="{{$category->id}}">{{$category->name}}</option>
@@ -25,7 +26,7 @@
                     <div class="row mb-4">
                         <label class="col-sm-2 col-form-label" for="basic-default-name">Sub-Category</label>
                         <div class="col-sm-10">
-                            <select name="sub_category_id" id="" class="form-control">
+                            <select name="sub_category_id" class="form-control" id="subCategory">
                                 <option value="">--Select Product Sub-category--</option>
                                 @foreach($sub_categories as $sub_category)
                                     <option value="{{$sub_category->id}}">{{$sub_category->name}}</option>
@@ -47,7 +48,7 @@
                     <div class="row mb-4">
                         <label class="col-sm-2 col-form-label" for="basic-default-name">Unit Name</label>
                         <div class="col-sm-10">
-                            <select name="brand_id" id="" class="form-control">
+                            <select name="unit_id" id="" class="form-control">
                                 <option value="">--Select Product Unit--</option>
                                 @foreach($units as $unit)
                                     <option value="{{$unit->id}}">{{$unit->name}}</option>
@@ -100,7 +101,7 @@
                     <div class="row mb-4">
                         <label class="col-sm-2 col-form-label">Other's Image</label>
                         <div class="col-sm-10">
-                            <input type="file" class="form-control" name="other_image"/>
+                            <input type="file" class="form-control" multiple name="other_image[]"/>
                         </div>
                     </div>
                     <div class="row mb-4">
