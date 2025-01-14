@@ -13,6 +13,7 @@
             </div>
             <div class="card-body">
                 <form method="post" action="{{route('unit.store')}}">
+                    <span class="text-success">{{session('message')}}</span>
                     @csrf
                     <div class="row mb-4">
                         <label class="col-sm-2 col-form-label" >Unit Name</label>

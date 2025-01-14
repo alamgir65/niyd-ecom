@@ -60,7 +60,8 @@
     <script src="{{asset('/')}}admin/assets/vendor/js/template-customizer.js"></script>
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="{{asset('/')}}admin/assets/js/config.js"></script>
-
+    <!-- include summernote css/js -->
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -821,7 +822,14 @@
 <script src="{{asset('/')}}admin/assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
 
 <script src="{{asset('/')}}admin/assets/js/tables-datatables-basic.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#summernote').summernote({
+            height: 350
+        });
+    });
+</script>
 </body>
 
 </html>
