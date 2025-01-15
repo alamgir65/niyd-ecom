@@ -28,6 +28,9 @@ return new class extends Migration
             $table->Text('meta_title')->nullable();
             $table->longText('meta_description')->nullable();
             $table->text('image');
+            $table->integer('hit_count')->default(0);
+            $table->integer('sales_count')->default(0);
+            $table->tinyInteger('feature_status+')->default(0);
             $table->timestamps();
         });
     }

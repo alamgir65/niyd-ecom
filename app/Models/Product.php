@@ -61,6 +61,7 @@ class Product extends Model
         self::$product->meta_description     = $request->meta_description;
         self::$product->image                = self::$imageUrl;
         self::$product->save();
+        return self::$product->id;
     }
 
     public static function deleteProduct($id){
@@ -69,5 +70,20 @@ class Product extends Model
             unlink(self::$product->image);
         }
         self::$product->delete();
+    }
+    public function category(){
+        return $this->belongsTo(Category::class);
+    }
+    public function subCategory(){
+        return $this->belongsTo(Subcategory::class);
+    }
+    public function brand(){
+        return $this->belongsTo(Brand::class);
+    }
+    public function unit(){
+        return $this->belongsTo(Unit::class);
+    }
+    public function otherImage(){
+        return $this->hasMany(OtherImage::class);
     }
 }

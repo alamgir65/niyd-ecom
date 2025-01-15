@@ -119,7 +119,7 @@
                     <div class="row mb-4">
                         <label class="col-sm-2 col-form-label">Meta Title</label>
                         <div class="col-sm-10">
-                            <textarea class="form-control" placeholder="Meta Title" name="meta_title"></textarea>
+                            <input type="text" class="form-control" placeholder="Meta Title" name="meta_title">
                         </div>
                     </div>
                     <div class="row mb-4">
