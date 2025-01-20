@@ -39,7 +39,7 @@ class Product extends Model
         self::$product = Product::find($id);
 
         if($request->file('image')){
-            unlink(self::$product->image);
+//            unlink(self::$product->image);
             self::$imageUrl = self::getImageUrl($request);
         }
         else{

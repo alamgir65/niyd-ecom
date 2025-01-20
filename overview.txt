@@ -74,3 +74,5 @@ about.html		--->	{{route('about')}}
 login.html		--->	{{route('customer.login-register')}}
 blog.html		--->	{{route('blog.index')}}
 shop.html		--->	{{route('product.index')}}
+php artisan make:migration add_home_status_column_to_categories_table --table=categories
+

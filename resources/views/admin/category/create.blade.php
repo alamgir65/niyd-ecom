@@ -24,6 +24,7 @@
                             <label><input type="radio" name="status" value="1"/>Unpublished</label>
                         </div>
                     </div>
+
                     <div class="row mb-4">
                         <label class="col-sm-2 col-form-label" for="basic-default-phone">Category Image</label>
                         <div class="col-sm-10">

@@ -32,35 +32,19 @@
                     <div class="product-details-tab">
                         <div id="img-1" class="zoomWrapper single-zoom">
                             <a href="#">
-                                <img id="zoom1" src="{{asset('/')}}website/img/product/productbig1.jpg" data-zoom-image="{{asset('/')}}website/img/product/productbig1.jpg" alt="big-1">
+                                <img id="zoom1" src="{{asset($product->image)}}" data-zoom-image="{{asset($product->image)}}" alt="big-1">
                             </a>
                         </div>
                         <div class="single-zoom-thumb">
                             <ul class="s-tab-zoom owl-carousel single-product-active" id="gallery_01">
+                                @foreach($product->otherImage as $otherImage)
                                 <li>
-                                    <a href="#" class="elevatezoom-gallery active" data-update="" data-image="{{asset('/')}}website/img/product/productbig2.jpg" data-zoom-image="{{asset('/')}}website/img/product/productbig2.jpg">
-                                        <img src="{{asset('/')}}website/img/product/productbig2.jpg" alt="zo-th-1"/>
+                                    <a href="#" class="elevatezoom-gallery active" data-update="" data-image="{{asset($otherImage->image)}}" data-zoom-image="{{asset($otherImage->image)}}">
+                                        <img src="{{asset($otherImage->image)}}" alt="zo-th-1"/>
                                     </a>
 
                                 </li>
-                                <li >
-                                    <a href="#" class="elevatezoom-gallery active" data-update="" data-image="{{asset('/')}}website/img/product/productbig3.jpg" data-zoom-image="{{asset('/')}}website/img/product/productbig3.jpg">
-                                        <img src="{{asset('/')}}website/img/product/productbig3.jpg" alt="zo-th-1"/>
-                                    </a>
-
-                                </li>
-                                <li >
-                                    <a href="#" class="elevatezoom-gallery active" data-update="" data-image="{{asset('/')}}website/img/product/productbig4.jpg" data-zoom-image="{{asset('/')}}website/img/product/productbig4.jpg">
-                                        <img src="{{asset('/')}}website/img/product/productbig4.jpg" alt="zo-th-1"/>
-                                    </a>
-
-                                </li>
-                                <li >
-                                    <a href="#" class="elevatezoom-gallery active" data-update="" data-image="{{asset('/')}}website/img/product/productbig5.jpg" data-zoom-image="{{asset('/')}}website/img/product/productbig5.jpg">
-                                        <img src="{{asset('/')}}website/img/product/productbig5.jpg" alt="zo-th-1"/>
-                                    </a>
-
-                                </li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>
@@ -69,7 +53,7 @@
                     <div class="product_d_right">
                         <form action="#">
 
-                            <h1>Aliquam lobortis</h1>
+                            <h1>{{$product->name}}</h1>
                             <div class="product_nav">
                                 <ul>
                                     <li class="prev"><a href="product-details.html"><i class="fa fa-angle-left"></i></a></li>
@@ -86,8 +70,8 @@
                                 </ul>
                             </div>
                             <div class="price_box">
-                                <span class="current_price">$70.00</span>
-                                <span class="old_price">$80.00</span>
+                                <span class="current_price">{{$product->selling_price}}</span>
+                                <span class="old_price">{{$product->regular_price}}</span>
 
                             </div>
                             <div class="product_desc">
@@ -158,8 +142,7 @@
                         <div class="tab-content">
                             <div class="tab-pane fade show active" id="info" role="tabpanel" >
                                 <div class="product_info_content">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.</p>
-                                    <p>Pellentesque aliquet, sem eget laoreet ultrices, ipsum metus feugiat sem, quis fermentum turpis eros eget velit. Donec ac tempus ante. Fusce ultricies massa massa. Fusce aliquam, purus eget sagittis vulputate, sapien libero hendrerit est, sed commodo augue nisi non neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor, lorem et placerat vestibulum, metus nisi posuere nisl, in accumsan elit odio quis mi. Cras neque metus, consequat et blandit et, luctus a nunc. Etiam gravida vehicula tellus, in imperdiet ligula euismod eget.</p>
+                                    {!! $product->long_description !!}
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="sheet" role="tabpanel" >

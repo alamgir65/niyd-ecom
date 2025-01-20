@@ -37,6 +37,12 @@
                             <textarea id="basic-default-message" class="form-control" placeholder="Category Description" name="description">{{$category->description}}</textarea>
                         </div>
                     </div>
+                    <div class="row mb-4">
+                        <label class="col-sm-2 col-form-label" >Home Status</label>
+                        <div class="col-sm-10">
+                            <input type="number" value="{{$category->home_status}}" name="home_status" class="form-control">
+                        </div>
+                    </div>
                     <div class="row justify-content-end">
                         <div class="col-sm-10">
                             <button type="submit" class="btn btn-primary">Update Category</button>

@@ -16,8 +16,8 @@ use App\Http\Controllers\UnitController;
 Route::get('/',[WebsiteController::class,'index'])->name('home');
 Route::get('/contact-us',[WebsiteController::class,'contact'])->name('contact');
 Route::get('/about-us',[WebsiteController::class,'about'])->name('about');
-Route::get('/product-category',[WebsiteController::class,'category'])->name('product-category');
-Route::get('/product-details',[WebsiteController::class,'productDetails'])->name('product-details');
+Route::get('/product-category/{id}',[WebsiteController::class,'category'])->name('product-category');
+Route::get('/product-details/{id}',[WebsiteController::class,'productDetails'])->name('product-details');
 
 Route::get('/add-cart',[CartController::class,'index'])->name('cart.index');
 Route::get('/checkout',[CheckoutController::class,'index'])->name('checkout.index');

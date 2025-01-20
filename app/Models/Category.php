@@ -37,6 +37,7 @@ class Category extends Model
         self::$category->name = $request->name;
         self::$category->status = $request->status;
         self::$category->image = self::$imageUrl;
+        self::$category->home_status = $request->home_status;
         self::$category->description = $request->description;
         self::$category->save();
     }
