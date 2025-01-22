@@ -51,8 +51,8 @@
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <div class="product_d_right">
-                        <form action="#">
-
+                        <form action="{{route('cart.add',['id'=>$product->id])}}" method="post" enctype="multipart/form-data">
+                            @csrf
                             <h1>{{$product->name}}</h1>
                             <div class="product_nav">
                                 <ul>
@@ -89,11 +89,11 @@
                             </div>
                             <div class="product_variant quantity">
                                 <label>quantity</label>
-                                <input min="1" max="100" value="1" type="number">
+                                <input min="1" name="qty" max="100" value="1" type="number">
                             </div>
                             <div class="action_links">
                                 <ul>
-                                    <li class="add_to_cart"><a href="{{route('cart.index')}}" title="add to cart"><i class="zmdi zmdi-shopping-cart-plus"></i> add to cart</a></li>
+                                    <li class="add_to_cart"><button type="submit" title="add to cart"><i class="zmdi zmdi-shopping-cart-plus"></i> add to cart</button></li>
                                     <li class="wishlist"><a href="wishlist.html" title="Add to Wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
                                     <li class="compare"><a href="#" title="compare"><i class="zmdi zmdi-swap"></i></a></li>
                                 </ul>

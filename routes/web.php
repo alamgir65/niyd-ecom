@@ -19,7 +19,10 @@ Route::get('/about-us',[WebsiteController::class,'about'])->name('about');
 Route::get('/product-category/{id}',[WebsiteController::class,'category'])->name('product-category');
 Route::get('/product-details/{id}',[WebsiteController::class,'productDetails'])->name('product-details');
 
-Route::get('/add-cart',[CartController::class,'index'])->name('cart.index');
+Route::get('/cart/index',[CartController::class,'index'])->name('cart.index');
+Route::post('/cart/add/{id}',[CartController::class,'addToCart'])->name('cart.add');
+Route::get('/cart/remove/{rowId}',[CartController::class,'remove'])->name('cart.remove');
+Route::post('/cart/update',[CartController::class,'update'])->name('cart.update');
 Route::get('/checkout',[CheckoutController::class,'index'])->name('checkout.index');
 
 Route::get('/customer/login-signup',[CustomerAuthController::class,'index'])->name('customer.login-register');

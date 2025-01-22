@@ -23,7 +23,7 @@ class WebsiteController extends Controller
         return view('website.category.index',['products' => Product::where('category_id',$id)->latest()->get()]);
     }
     public function productDetails($id){
-        return view('website.product.detail',['product' => Product::find($id),'related_products' => Product::where('')]);
+        return view('website.product.detail',['product' => Product::find($id)]);
     }
     public function contact(){
         return view('website.home.contact');

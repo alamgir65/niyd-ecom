@@ -188,7 +188,7 @@
                                                         </div>
                                                         <div class="product_content">
                                                             <div class="product_name">
-                                                                <h3><a href="product-details.html">{{$product->name}}</a></h3>
+                                                                <h3><a href="{{route('product-details',['id' => $product->id])}}">{{$product->name}}</a></h3>
                                                             </div>
                                                             <div class="product_rating">
                                                                 <ul>
@@ -462,7 +462,7 @@
                             @foreach($new_products_left as $product)
                                 <div class="single_product">
                                 <div class="product_thumb">
-                                    <a href="product-details.html"><img src="{{asset($product->image)}}" alt="img"></a>
+                                    <a href="{{route('product-details',['id' => $product->id])}}"><img src="{{asset($product->image)}}" alt="img"></a>
                                     <div class="label_product">
                                         <span class="label_sale">sale</span>
                                     </div>
@@ -472,7 +472,7 @@
                                 </div>
                                 <div class="product_content">
                                     <div class="product_name">
-                                        <h3><a href="product-details.html">{{$product->name}}</a></h3>
+                                        <h3><a href="{{route('product-details',['id' => $product->id])}}">{{$product->name}}</a></h3>
                                     </div>
                                     <div class="product_rating">
                                         <ul>
@@ -502,14 +502,14 @@
                     <div class="col-lg-6 col-md-12">
                         <div class="single_product product_center">
                             <div class="product_thumb">
-                                <a href="product-details.html"><img src="{{asset($new_product_mid->image)}}" alt="img"></a>
+                                <a href="{{route('product-details',['id' => $product->id])}}"><img src="{{asset($new_product_mid->image)}}" alt="img"></a>
                                 <div class="quick_button">
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#modal_box"  title="quick view"> <i class="zmdi zmdi-eye"></i></a>
                                 </div>
                             </div>
                             <div class="product_content">
                                 <div class="product_name">
-                                    <h3><a href="product-details.html">{{$new_product_mid->name}}</a></h3>
+                                    <h3><a href="{{route('product-details',['id' => $product->id])}}">{{$new_product_mid->name}}</a></h3>
                                 </div>
                                 <div class="product_rating">
                                     <ul>
@@ -539,7 +539,7 @@
                             @foreach($new_products_right as $product)
                                 <div class="single_product">
                                 <div class="product_thumb">
-                                    <a href="product-details.html"><img src="{{asset($product->image)}}" alt="img"></a>
+                                    <a href="{{route('product-details',['id' => $product->id])}}"><img src="{{asset($product->image)}}" alt="img"></a>
                                     <div class="label_product">
                                         <span class="label_sale">sale</span>
                                     </div>
@@ -549,7 +549,7 @@
                                 </div>
                                 <div class="product_content">
                                     <div class="product_name">
-                                        <h3><a href="product-details.html">{{$product->name}}</a></h3>
+                                        <h3><a href="{{route('product-details',['id' => $product->id])}}">{{$product->name}}</a></h3>
                                     </div>
                                     <div class="product_rating">
                                         <ul>
@@ -658,7 +658,7 @@
                                 @foreach($home_category_one->products as $home_category_one_product)
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset($home_category_one_product->image)}}" alt="img"></a>
+                                        <a href="{{route('product-details',['id' => $product->id])}}"><img src="{{asset($home_category_one_product->image)}}" alt="img"></a>
                                         <div class="label_product">
                                             <span class="label_sale">sale</span>
                                         </div>
@@ -668,7 +668,7 @@
                                     </div>
                                     <div class="product_content">
                                         <div class="product_name">
-                                            <h3><a href="product-details.html">{{$home_category_one_product->name}}</a></h3>
+                                            <h3><a href="{{route('product-details',['id' => $product->id])}}">{{$home_category_one_product->name}}</a></h3>
                                         </div>
                                         <div class="product_rating">
                                             <ul>
