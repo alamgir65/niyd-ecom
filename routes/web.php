@@ -23,7 +23,11 @@ Route::get('/cart/index',[CartController::class,'index'])->name('cart.index');
 Route::post('/cart/add/{id}',[CartController::class,'addToCart'])->name('cart.add');
 Route::get('/cart/remove/{rowId}',[CartController::class,'remove'])->name('cart.remove');
 Route::post('/cart/update',[CartController::class,'update'])->name('cart.update');
+
 Route::get('/checkout',[CheckoutController::class,'index'])->name('checkout.index');
+Route::post('/checkout/new-customer',[CheckoutController::class,'newCustomer'])->name('checkout.new-customer');
+Route::get('/checkout/billing-info',[CheckoutController::class,'billingInfo'])->name('checkout.billing-info');
+Route::post('/checkout/customer-login',[CheckoutController::class,'customerLogin'])->name('checkout.customer-login');
 
 Route::get('/customer/login-signup',[CustomerAuthController::class,'index'])->name('customer.login-register');
 

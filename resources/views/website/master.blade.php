@@ -107,7 +107,7 @@
                             </form>
                         </div>
                         <div class="mini_cart_wrapper">
-                            <a href="javascript:void(0)"><i class="zmdi zmdi-shopping-basket"></i> <span>2items - $213.00</span> </a>
+                            <a href="javascript:void(0)"><i class="zmdi zmdi-shopping-basket"></i> <span>{{count(Cart::content())}}items - $213.00</span> </a>
                             <!--mini cart-->
                             <div class="mini_cart">
                                 <div class="cart_item">
