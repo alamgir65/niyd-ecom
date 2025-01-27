@@ -30,6 +30,7 @@ Route::get('/checkout/billing-info',[CheckoutController::class,'billingInfo'])->
 Route::post('/checkout/customer-login',[CheckoutController::class,'customerLogin'])->name('checkout.customer-login');
 
 Route::get('/customer/login-signup',[CustomerAuthController::class,'index'])->name('customer.login-register');
+Route::get('/customer/logout',[CustomerAuthController::class,'logout'])->name('customer.logout');
 
 Route::get('/all-blogs',[BlogController::class,'index'])->name('blog.index');
 

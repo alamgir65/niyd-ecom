@@ -51,8 +51,15 @@ For all Views file:
  * Laravel
     jetstream
 
+Session :
+-----------------------
+For PHP:
+session access -> session_start()
+session data store -> $_SESSION['name'] = 'Alamgir'
+session data retrive -> $_SESSION['name']
+session remove -> unset($_SESSION['name'])
 
------------------
+-----------------------
 For using jetstream :
     composer require laravel/jetstream
     php artisan jetstream:install livewire
