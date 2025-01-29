@@ -115,41 +115,31 @@
                             </form>
                         </div>
                         <div class="mini_cart_wrapper">
-                            <a href="javascript:void(0)"><i class="zmdi zmdi-shopping-basket"></i> <span>{{count(Cart::content())}}items - $213.00</span> </a>
+                            <a href="javascript:void(0)"><i class="zmdi zmdi-shopping-basket"></i> <span>{{count(Cart::content())}} items -BDT {{Cart::total()}}</span> </a>
                             <!--mini cart-->
                             <div class="mini_cart">
+
+                                @foreach(Cart::content() as $item)
                                 <div class="cart_item">
                                     <div class="cart_img">
-                                        <a href="#"><img src="{{asset('/')}}website/img/s-product/product.jpg" alt=""></a>
+                                        <a href="#"><img src="{{asset($item->options->image)}}" alt=""></a>
                                     </div>
                                     <div class="cart_info">
-                                        <a href="#">Condimentum Watches</a>
+                                        <a href="#">{{$item->name}}</a>
 
-                                        <span class="quantity">Qty: 1</span>
-                                        <span class="price_cart">$60.00</span>
+                                        <span class="quantity">Qty: {{$item->qty}}</span>
+                                        <span class="price_cart">{{$item->price}}</span>
 
                                     </div>
                                     <div class="cart_remove">
-                                        <a href="#"><i class="ion-android-close"></i></a>
+                                        <a href="{{route('cart.remove',['rowId'=>$item->rowId])}}"><i class="ion-android-close"></i></a>
                                     </div>
                                 </div>
-                                <div class="cart_item">
-                                    <div class="cart_img">
-                                        <a href="#"><img src="{{asset('/')}}website/img/s-product/product2.jpg" alt=""></a>
-                                    </div>
-                                    <div class="cart_info">
-                                        <a href="#">Officiis debitis</a>
-                                        <span class="quantity">Qty: 1</span>
-                                        <span class="price_cart">$69.00</span>
-                                    </div>
-                                    <div class="cart_remove">
-                                        <a href="#"><i class="ion-android-close"></i></a>
-                                    </div>
-                                </div>
+                                @endforeach
                                 <div class="mini_cart_table">
                                     <div class="cart_total">
                                         <span>Subtotal:</span>
-                                        <span class="price">$138.00</span>
+                                        <span class="price">{{Cart::total()}}</span>
                                     </div>
                                 </div>
 

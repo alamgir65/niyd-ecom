@@ -227,7 +227,7 @@
                     </a>
                     <ul class="menu-sub">
                         <li class="menu-item">
-                            <a href="app-invoice-list.html" class="menu-link">
+                            <a href="{{route('order.index')}}" class="menu-link">
                                 <div>Manage Order</div>
                             </a>
                         </li>

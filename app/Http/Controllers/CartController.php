@@ -28,6 +28,20 @@ class CartController extends Controller
         ]);
         return redirect('/cart/index');
     }
+    public function directAddToCart($id){
+        $this->product = Product::find($id);
+        Cart::add([
+            'id' => $this->product->id,
+            'name'=>$this->product->name,
+            'qty'=>1,
+            'price'=>$this->product->selling_price,
+            'options'=>[
+                'image'=>$this->product->image,
+                'code'=>$this->product->code,
+            ]
+        ]);
+        return redirect('/cart/index');
+    }
     public function remove($rowId){
         Cart::remove($rowId);
         return back()->with('Cart product removed successfully');

@@ -59,7 +59,7 @@
                     </div>
                     <!--shipping area end-->
                     <div class="slider_area owl-carousel">
-                        <div class="single_slider" data-bg img="{{asset('/')}}website/assets/img/slider/slider1.jpg">
+                        <div class="single_slider" data-bg img="{{asset('/')}}slider1.jpg">
                             <div class="slider_content content_position_center">
                                 <h1>New</h1>
                                 <h2>Designer Funiture! </h2>
@@ -67,7 +67,7 @@
                                 <a href="shop.html">shop now</a>
                             </div>
                         </div>
-                        <div class="single_slider d-flex align-items-center" data-bg img="{{asset('/')}}website/assets/img/slider/slider2.jpg">
+                        <div class="single_slider d-flex align-items-center" data-bg img="{{asset('/')}}website/img/slider/slider2.jpg">
                             <div class="slider_content content_position_left">
                                 <h1>New</h1>
                                 <h2>Designer Funiture! </h2>
@@ -92,7 +92,7 @@
                     <div class="category_product_carousel category_column4 owl-carousel">
                         <div class="single_category_product">
                             <div class="category_product_thumb">
-                                <a href="shop.html"><img src="{{asset('/')}}website/assets/img/category/category1.jpg" alt=""></a>
+                                <a href="shop.html"><img src="{{asset('/')}}website/img/category/category1.jpg" alt=""></a>
                             </div>
                             <div class="category_product_name">
                                 <h2><a href="shop.html">television</a></h2>
@@ -100,7 +100,7 @@
                         </div>
                         <div class="single_category_product">
                             <div class="category_product_thumb">
-                                <a href="shop.html"><img src="{{asset('/')}}website/assets/img/category/category2.jpg" alt=""></a>
+                                <a href="shop.html"><img src="{{asset('/')}}website/img/category/category2.jpg" alt=""></a>
                             </div>
                             <div class="category_product_name">
                                 <h2><a href="shop.html">audio</a></h2>
@@ -108,7 +108,7 @@
                         </div>
                         <div class="single_category_product">
                             <div class="category_product_thumb">
-                                <a href="shop.html"><img src="{{asset('/')}}website/assets/img/category/category3.jpg" alt=""></a>
+                                <a href="shop.html"><img src="{{asset('/')}}website/img/category/category3.jpg" alt=""></a>
                             </div>
                             <div class="category_product_name">
                                 <h2><a href="shop.html">Camera</a></h2>
@@ -116,7 +116,7 @@
                         </div>
                         <div class="single_category_product">
                             <div class="category_product_thumb">
-                                <a href="shop.html"><img src="{{asset('/')}}website/assets/img/category/category4.jpg" alt=""></a>
+                                <a href="shop.html"><img src="{{asset('/')}}website/img/category/category4.jpg" alt=""></a>
                             </div>
                             <div class="category_product_name">
                                 <h2><a href="shop.html">lundry</a></h2>
@@ -124,7 +124,7 @@
                         </div>
                         <div class="single_category_product">
                             <div class="category_product_thumb">
-                                <a href="shop.html"><img src="{{asset('/')}}website/assets/img/category/category5.jpg" alt=""></a>
+                                <a href="shop.html"><img src="{{asset('/')}}website/img/category/category5.jpg" alt=""></a>
                             </div>
                             <div class="category_product_name">
                                 <h2><a href="shop.html">cooling</a></h2>
@@ -132,7 +132,7 @@
                         </div>
                         <div class="single_category_product">
                             <div class="category_product_thumb">
-                                <a href="shop.html"><img src="{{asset('/')}}website/assets/img/category/category2.jpg" alt=""></a>
+                                <a href="shop.html"><img src="{{asset('/')}}website/img/category/category2.jpg" alt=""></a>
                             </div>
                             <div class="category_product_name">
                                 <h2><a href="shop.html">audio</a></h2>
@@ -206,7 +206,7 @@
                                                             <div class="action_links">
                                                                 <ul>
                                                                     <li class="wishlist"><a href="wishlist.html" title="Add to Wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
-                                                                    <li class="add_to_cart"><a href="cart.html" title="add to cart"><i class="zmdi zmdi-shopping-cart-plus"></i> add to cart</a></li>
+                                                                    <li class="add_to_cart"><a href="{{route('cart.direct-add-to-cart',['id'=>$product->id])}}" title="add to cart"><i class="zmdi zmdi-shopping-cart-plus"></i> add to cart</a></li>
                                                                     <li class="compare"><a href="#" title="compare"><i class="zmdi zmdi-swap"></i></a></li>
                                                                 </ul>
                                                             </div>
@@ -229,7 +229,7 @@
                         <div class="small_product_wrapper">
                             <div class="small_product_items">
                                 <div class="product_thumb">
-                                    <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/s-product/product3.jpg" alt=""></a>
+                                    <a href="product-details.html"><img src="{{asset('/')}}website/img/s-product/product3.jpg" alt=""></a>
                                 </div>
                                 <div class="product_content">
                                     <div class="product_name">
@@ -252,7 +252,7 @@
                             </div>
                             <div class="small_product_items">
                                 <div class="product_thumb">
-                                    <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/s-product/product4.jpg" alt=""></a>
+                                    <a href="product-details.html"><img src="{{asset('/')}}website/img/s-product/product4.jpg" alt=""></a>
                                 </div>
                                 <div class="product_content">
                                     <div class="product_name">
@@ -275,7 +275,7 @@
                             </div>
                             <div class="small_product_items">
                                 <div class="product_thumb">
-                                    <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/s-product/product5.jpg" alt=""></a>
+                                    <a href="product-details.html"><img src="{{asset('/')}}website/img/s-product/product5.jpg" alt=""></a>
                                 </div>
                                 <div class="product_content">
                                     <div class="product_name">
@@ -298,7 +298,7 @@
                             </div>
                             <div class="small_product_items">
                                 <div class="product_thumb">
-                                    <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/s-product/product6.jpg" alt=""></a>
+                                    <a href="product-details.html"><img src="{{asset('/')}}website/img/s-product/product6.jpg" alt=""></a>
                                 </div>
                                 <div class="product_content">
                                     <div class="product_name">
@@ -321,7 +321,7 @@
                             </div>
                             <div class="small_product_items">
                                 <div class="product_thumb">
-                                    <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/s-product/product7.jpg" alt=""></a>
+                                    <a href="product-details.html"><img src="{{asset('/')}}website/img/s-product/product7.jpg" alt=""></a>
                                 </div>
                                 <div class="product_content">
                                     <div class="product_name">
@@ -344,7 +344,7 @@
                             </div>
                             <div class="small_product_items">
                                 <div class="product_thumb">
-                                    <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/s-product/product8.jpg" alt=""></a>
+                                    <a href="product-details.html"><img src="{{asset('/')}}website/img/s-product/product8.jpg" alt=""></a>
                                 </div>
                                 <div class="product_content">
                                     <div class="product_name">
@@ -367,7 +367,7 @@
                             </div>
                             <div class="small_product_items">
                                 <div class="product_thumb">
-                                    <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/s-product/product3.jpg" alt=""></a>
+                                    <a href="product-details.html"><img src="{{asset('/')}}website/img/s-product/product3.jpg" alt=""></a>
                                 </div>
                                 <div class="product_content">
                                     <div class="product_name">
@@ -390,7 +390,7 @@
                             </div>
                             <div class="small_product_items">
                                 <div class="product_thumb">
-                                    <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/s-product/product4.jpg" alt=""></a>
+                                    <a href="product-details.html"><img src="{{asset('/')}}website/img/s-product/product4.jpg" alt=""></a>
                                 </div>
                                 <div class="product_content">
                                     <div class="product_name">
@@ -413,7 +413,7 @@
                             </div>
                             <div class="small_product_items">
                                 <div class="product_thumb">
-                                    <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/s-product/product5.jpg" alt=""></a>
+                                    <a href="product-details.html"><img src="{{asset('/')}}website/img/s-product/product5.jpg" alt=""></a>
                                 </div>
                                 <div class="product_content">
                                     <div class="product_name">
@@ -436,7 +436,7 @@
                             </div>
                         </div>
                         <div class="sidebar_banner_thumb mt-30">
-                            <a href="shop.html"><img src="{{asset('/')}}website/assets/img/bg/banner1.jpg" alt=""></a>
+                            <a href="shop.html"><img src="{{asset('/')}}website/img/bg/banner1.jpg" alt=""></a>
                         </div>
                     </div>
                 </div>
@@ -490,7 +490,7 @@
                                     <div class="action_links">
                                         <ul>
                                             <li class="wishlist"><a href="wishlist.html" title="Add to Wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
-                                            <li class="add_to_cart"><a href="cart.html" title="add to cart"><i class="zmdi zmdi-shopping-cart-plus"></i> add to cart</a></li>
+                                            <li class="add_to_cart"><a href="{{route('cart.direct-add-to-cart',['id'=>$product->id])}}" title="add to cart"><i class="zmdi zmdi-shopping-cart-plus"></i> add to cart</a></li>
                                             <li class="compare"><a href="#" title="compare"><i class="zmdi zmdi-swap"></i></a></li>
                                         </ul>
                                     </div>
@@ -527,7 +527,7 @@
                                 <div class="action_links">
                                     <ul>
                                         <li class="wishlist"><a href="wishlist.html" title="Add to Wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
-                                        <li class="add_to_cart"><a href="cart.html" title="add to cart"><i class="zmdi zmdi-shopping-cart-plus"></i> add to cart</a></li>
+                                        <li class="add_to_cart"><a href="{{route('cart.direct-add-to-cart',['id'=>$product->id])}}" title="add to cart"><i class="zmdi zmdi-shopping-cart-plus"></i> add to cart</a></li>
                                         <li class="compare"><a href="#" title="compare"><i class="zmdi zmdi-swap"></i></a></li>
                                     </ul>
                                 </div>
@@ -567,7 +567,7 @@
                                     <div class="action_links">
                                         <ul>
                                             <li class="wishlist"><a href="wishlist.html" title="Add to Wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
-                                            <li class="add_to_cart"><a href="cart.html" title="add to cart"><i class="zmdi zmdi-shopping-cart-plus"></i> add to cart</a></li>
+                                            <li class="add_to_cart"><a href="{{route('cart.direct-add-to-cart',['id'=>$product->id])}}" title="add to cart"><i class="zmdi zmdi-shopping-cart-plus"></i> add to cart</a></li>
                                             <li class="compare"><a href="#" title="compare"><i class="zmdi zmdi-swap"></i></a></li>
                                         </ul>
                                     </div>
@@ -589,7 +589,7 @@
                 <div class="col-lg-6 col-md-6">
                     <div class="single_banner">
                         <div class="banner_thumb">
-                            <a href="shop.html"><img src="{{asset('/')}}website/assets/img/bg/banner2.jpg" alt=""></a>
+                            <a href="shop.html"><img src="{{asset('/')}}website/img/bg/banner2.jpg" alt=""></a>
                         </div>
 
                     </div>
@@ -597,7 +597,7 @@
                 <div class="col-lg-6 col-md-6">
                     <div class="single_banner">
                         <div class="banner_thumb">
-                            <a href="shop.html"><img src="{{asset('/')}}website/assets/img/bg/banner3.jpg" alt=""></a>
+                            <a href="shop.html"><img src="{{asset('/')}}website/img/bg/banner3.jpg" alt=""></a>
                         </div>
 
                     </div>
@@ -686,7 +686,7 @@
                                         <div class="action_links">
                                             <ul>
                                                 <li class="wishlist"><a href="wishlist.html" title="Add to Wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
-                                                <li class="add_to_cart"><a href="cart.html" title="add to cart"><i class="zmdi zmdi-shopping-cart-plus"></i> add to cart</a></li>
+                                                <li class="add_to_cart"><a href="{{route('cart.direct-add-to-cart',['id'=>$product->id])}}" title="add to cart"><i class="zmdi zmdi-shopping-cart-plus"></i> add to cart</a></li>
                                                 <li class="compare"><a href="#" title="compare"><i class="zmdi zmdi-swap"></i></a></li>
                                             </ul>
                                         </div>
@@ -711,7 +711,7 @@
                 <div class="col-12">
                     <div class="single_banner">
                         <div class="banner_thumb">
-                            <a href="shop.html"> <img src="{{asset('/')}}website/assets/img/bg/banner4.jpg" alt=""></a>
+                            <a href="shop.html"> <img src="{{asset('/')}}website/img/bg/banner4.jpg" alt=""></a>
                         </div>
 
                     </div>
@@ -771,7 +771,7 @@
                                 @foreach($home_category_two->products as $home_category_two_product)
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset($home_category_two_product->image)}}" alt=""></a>
+                                        <a href="{{route('product-details',['id'=>$home_category_two_product->id])}}"><img src="{{asset($home_category_two_product->image)}}" alt=""></a>
                                         <div class="label_product">
                                             <span class="label_sale">sale</span>
                                         </div>
@@ -781,7 +781,7 @@
                                     </div>
                                     <div class="product_content">
                                         <div class="product_name">
-                                            <h3><a href="product-details.html">{{$home_category_two_product->name}}</a></h3>
+                                            <h3><a href="{{route('product-details',['id'=>$home_category_two_product->id])}}">{{$home_category_two_product->name}}</a></h3>
                                         </div>
                                         <div class="product_rating">
                                             <ul>
@@ -799,7 +799,7 @@
                                         <div class="action_links">
                                             <ul>
                                                 <li class="wishlist"><a href="wishlist.html" title="Add to Wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
-                                                <li class="add_to_cart"><a href="cart.html" title="add to cart"><i class="zmdi zmdi-shopping-cart-plus"></i> add to cart</a></li>
+                                                <li class="add_to_cart"><a href="{{route('cart.direct-add-to-cart',['id'=>$home_category_two_product->id])}}" title="add to cart"><i class="zmdi zmdi-shopping-cart-plus"></i> add to cart</a></li>
                                                 <li class="compare"><a href="#" title="compare"><i class="zmdi zmdi-swap"></i></a></li>
                                             </ul>
                                         </div>
@@ -813,7 +813,7 @@
                             <div class="product_carousel product_column4 owl-carousel">
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product15.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product15.jpg" alt=""></a>
                                         <div class="label_product">
                                             <span class="label_sale">sale</span>
                                         </div>
@@ -849,7 +849,7 @@
                                 </div>
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product16.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product16.jpg" alt=""></a>
                                         <div class="quick_button">
                                             <a href="#" data-bs-toggle="modal" data-bs-target="#modal_box"  title="quick view"> <i class="zmdi zmdi-eye"></i></a>
                                         </div>
@@ -882,7 +882,7 @@
                                 </div>
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product17.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product17.jpg" alt=""></a>
                                         <div class="label_product">
                                             <span class="label_sale">sale</span>
                                         </div>
@@ -918,7 +918,7 @@
                                 </div>
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product18.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product18.jpg" alt=""></a>
                                         <div class="quick_button">
                                             <a href="#" data-bs-toggle="modal" data-bs-target="#modal_box"  title="quick view"> <i class="zmdi zmdi-eye"></i></a>
                                         </div>
@@ -951,7 +951,7 @@
                                 </div>
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product19.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product19.jpg" alt=""></a>
                                         <div class="label_product">
                                             <span class="label_sale">sale</span>
                                         </div>
@@ -991,7 +991,7 @@
                             <div class="product_carousel product_column4 owl-carousel">
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product25.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product25.jpg" alt=""></a>
                                         <div class="label_product">
                                             <span class="label_sale">sale</span>
                                         </div>
@@ -1027,7 +1027,7 @@
                                 </div>
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product24.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product24.jpg" alt=""></a>
                                         <div class="quick_button">
                                             <a href="#" data-bs-toggle="modal" data-bs-target="#modal_box"  title="quick view"> <i class="zmdi zmdi-eye"></i></a>
                                         </div>
@@ -1060,7 +1060,7 @@
                                 </div>
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product23.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product23.jpg" alt=""></a>
                                         <div class="label_product">
                                             <span class="label_sale">sale</span>
                                         </div>
@@ -1096,7 +1096,7 @@
                                 </div>
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product22.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product22.jpg" alt=""></a>
                                         <div class="quick_button">
                                             <a href="#" data-bs-toggle="modal" data-bs-target="#modal_box"  title="quick view"> <i class="zmdi zmdi-eye"></i></a>
                                         </div>
@@ -1129,7 +1129,7 @@
                                 </div>
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product21.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product21.jpg" alt=""></a>
                                         <div class="label_product">
                                             <span class="label_sale">sale</span>
                                         </div>
@@ -1169,7 +1169,7 @@
                             <div class="product_carousel product_column4 owl-carousel">
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product15.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product15.jpg" alt=""></a>
                                         <div class="label_product">
                                             <span class="label_sale">sale</span>
                                         </div>
@@ -1205,7 +1205,7 @@
                                 </div>
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product16.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product16.jpg" alt=""></a>
                                         <div class="quick_button">
                                             <a href="#" data-bs-toggle="modal" data-bs-target="#modal_box"  title="quick view"> <i class="zmdi zmdi-eye"></i></a>
                                         </div>
@@ -1238,7 +1238,7 @@
                                 </div>
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product17.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product17.jpg" alt=""></a>
                                         <div class="label_product">
                                             <span class="label_sale">sale</span>
                                         </div>
@@ -1274,7 +1274,7 @@
                                 </div>
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product18.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product18.jpg" alt=""></a>
                                         <div class="quick_button">
                                             <a href="#" data-bs-toggle="modal" data-bs-target="#modal_box"  title="quick view"> <i class="zmdi zmdi-eye"></i></a>
                                         </div>
@@ -1307,7 +1307,7 @@
                                 </div>
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product19.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product19.jpg" alt=""></a>
                                         <div class="label_product">
                                             <span class="label_sale">sale</span>
                                         </div>
@@ -1347,7 +1347,7 @@
                             <div class="product_carousel product_column4 owl-carousel">
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product19.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product19.jpg" alt=""></a>
                                         <div class="label_product">
                                             <span class="label_sale">sale</span>
                                         </div>
@@ -1383,7 +1383,7 @@
                                 </div>
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product18.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product18.jpg" alt=""></a>
                                         <div class="quick_button">
                                             <a href="#" data-bs-toggle="modal" data-bs-target="#modal_box"  title="quick view"> <i class="zmdi zmdi-eye"></i></a>
                                         </div>
@@ -1416,7 +1416,7 @@
                                 </div>
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product17.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product17.jpg" alt=""></a>
                                         <div class="label_product">
                                             <span class="label_sale">sale</span>
                                         </div>
@@ -1452,7 +1452,7 @@
                                 </div>
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product18.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product18.jpg" alt=""></a>
                                         <div class="quick_button">
                                             <a href="#" data-bs-toggle="modal" data-bs-target="#modal_box"  title="quick view"> <i class="zmdi zmdi-eye"></i></a>
                                         </div>
@@ -1485,7 +1485,7 @@
                                 </div>
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product19.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product19.jpg" alt=""></a>
                                         <div class="label_product">
                                             <span class="label_sale">sale</span>
                                         </div>
@@ -1525,7 +1525,7 @@
                             <div class="product_carousel product_column4 owl-carousel">
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product15.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product15.jpg" alt=""></a>
                                         <div class="label_product">
                                             <span class="label_sale">sale</span>
                                         </div>
@@ -1561,7 +1561,7 @@
                                 </div>
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product16.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product16.jpg" alt=""></a>
                                         <div class="quick_button">
                                             <a href="#" data-bs-toggle="modal" data-bs-target="#modal_box"  title="quick view"> <i class="zmdi zmdi-eye"></i></a>
                                         </div>
@@ -1594,7 +1594,7 @@
                                 </div>
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product17.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product17.jpg" alt=""></a>
                                         <div class="label_product">
                                             <span class="label_sale">sale</span>
                                         </div>
@@ -1630,7 +1630,7 @@
                                 </div>
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product18.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product18.jpg" alt=""></a>
                                         <div class="quick_button">
                                             <a href="#" data-bs-toggle="modal" data-bs-target="#modal_box"  title="quick view"> <i class="zmdi zmdi-eye"></i></a>
                                         </div>
@@ -1663,7 +1663,7 @@
                                 </div>
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product19.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product19.jpg" alt=""></a>
                                         <div class="label_product">
                                             <span class="label_sale">sale</span>
                                         </div>
@@ -1714,7 +1714,7 @@
                 <div class="col-12">
                     <div class="single_banner">
                         <div class="banner_thumb">
-                            <a href="shop.html"><img src="{{asset('/')}}website/assets/img/bg/banner5.jpg" alt=""></a>
+                            <a href="shop.html"><img src="{{asset('/')}}website/img/bg/banner5.jpg" alt=""></a>
                         </div>
 
                     </div>
@@ -1773,7 +1773,7 @@
                             <div class="product_carousel product_column4 owl-carousel">
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product22.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product22.jpg" alt=""></a>
                                         <div class="label_product">
                                             <span class="label_sale">sale</span>
                                         </div>
@@ -1809,7 +1809,7 @@
                                 </div>
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product23.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product23.jpg" alt=""></a>
                                         <div class="quick_button">
                                             <a href="#" data-bs-toggle="modal" data-bs-target="#modal_box"  title="quick view"> <i class="zmdi zmdi-eye"></i></a>
                                         </div>
@@ -1842,7 +1842,7 @@
                                 </div>
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product24.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product24.jpg" alt=""></a>
                                         <div class="label_product">
                                             <span class="label_sale">sale</span>
                                         </div>
@@ -1878,7 +1878,7 @@
                                 </div>
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product25.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product25.jpg" alt=""></a>
                                         <div class="quick_button">
                                             <a href="#" data-bs-toggle="modal" data-bs-target="#modal_box"  title="quick view"> <i class="zmdi zmdi-eye"></i></a>
                                         </div>
@@ -1911,7 +1911,7 @@
                                 </div>
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product21.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product21.jpg" alt=""></a>
                                         <div class="label_product">
                                             <span class="label_sale">sale</span>
                                         </div>
@@ -1952,7 +1952,7 @@
                             <div class="product_carousel product_column4 owl-carousel">
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product20.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product20.jpg" alt=""></a>
                                         <div class="label_product">
                                             <span class="label_sale">sale</span>
                                         </div>
@@ -1988,7 +1988,7 @@
                                 </div>
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product19.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product19.jpg" alt=""></a>
                                         <div class="quick_button">
                                             <a href="#" data-bs-toggle="modal" data-bs-target="#modal_box"  title="quick view"> <i class="zmdi zmdi-eye"></i></a>
                                         </div>
@@ -2021,7 +2021,7 @@
                                 </div>
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product18.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product18.jpg" alt=""></a>
                                         <div class="label_product">
                                             <span class="label_sale">sale</span>
                                         </div>
@@ -2057,7 +2057,7 @@
                                 </div>
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product17.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product17.jpg" alt=""></a>
                                         <div class="quick_button">
                                             <a href="#" data-bs-toggle="modal" data-bs-target="#modal_box"  title="quick view"> <i class="zmdi zmdi-eye"></i></a>
                                         </div>
@@ -2090,7 +2090,7 @@
                                 </div>
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product16.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product16.jpg" alt=""></a>
                                         <div class="label_product">
                                             <span class="label_sale">sale</span>
                                         </div>
@@ -2130,7 +2130,7 @@
                             <div class="product_carousel product_column4 owl-carousel">
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product15.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product15.jpg" alt=""></a>
                                         <div class="label_product">
                                             <span class="label_sale">sale</span>
                                         </div>
@@ -2166,7 +2166,7 @@
                                 </div>
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product16.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product16.jpg" alt=""></a>
                                         <div class="quick_button">
                                             <a href="#" data-bs-toggle="modal" data-bs-target="#modal_box"  title="quick view"> <i class="zmdi zmdi-eye"></i></a>
                                         </div>
@@ -2199,7 +2199,7 @@
                                 </div>
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product17.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product17.jpg" alt=""></a>
                                         <div class="label_product">
                                             <span class="label_sale">sale</span>
                                         </div>
@@ -2235,7 +2235,7 @@
                                 </div>
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product18.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product18.jpg" alt=""></a>
                                         <div class="quick_button">
                                             <a href="#" data-bs-toggle="modal" data-bs-target="#modal_box"  title="quick view"> <i class="zmdi zmdi-eye"></i></a>
                                         </div>
@@ -2268,7 +2268,7 @@
                                 </div>
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product19.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product19.jpg" alt=""></a>
                                         <div class="label_product">
                                             <span class="label_sale">sale</span>
                                         </div>
@@ -2308,7 +2308,7 @@
                             <div class="product_carousel product_column4 owl-carousel">
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product18.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product18.jpg" alt=""></a>
                                         <div class="label_product">
                                             <span class="label_sale">sale</span>
                                         </div>
@@ -2344,7 +2344,7 @@
                                 </div>
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product19.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product19.jpg" alt=""></a>
                                         <div class="quick_button">
                                             <a href="#" data-bs-toggle="modal" data-bs-target="#modal_box"  title="quick view"> <i class="zmdi zmdi-eye"></i></a>
                                         </div>
@@ -2377,7 +2377,7 @@
                                 </div>
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product20.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product20.jpg" alt=""></a>
                                         <div class="label_product">
                                             <span class="label_sale">sale</span>
                                         </div>
@@ -2413,7 +2413,7 @@
                                 </div>
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product21.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product21.jpg" alt=""></a>
                                         <div class="quick_button">
                                             <a href="#" data-bs-toggle="modal" data-bs-target="#modal_box"  title="quick view"> <i class="zmdi zmdi-eye"></i></a>
                                         </div>
@@ -2446,7 +2446,7 @@
                                 </div>
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product22.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product22.jpg" alt=""></a>
                                         <div class="label_product">
                                             <span class="label_sale">sale</span>
                                         </div>
@@ -2486,7 +2486,7 @@
                             <div class="product_carousel product_column4 owl-carousel">
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product15.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product15.jpg" alt=""></a>
                                         <div class="label_product">
                                             <span class="label_sale">sale</span>
                                         </div>
@@ -2522,7 +2522,7 @@
                                 </div>
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product16.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product16.jpg" alt=""></a>
                                         <div class="quick_button">
                                             <a href="#" data-bs-toggle="modal" data-bs-target="#modal_box"  title="quick view"> <i class="zmdi zmdi-eye"></i></a>
                                         </div>
@@ -2555,7 +2555,7 @@
                                 </div>
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product17.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product17.jpg" alt=""></a>
                                         <div class="label_product">
                                             <span class="label_sale">sale</span>
                                         </div>
@@ -2591,7 +2591,7 @@
                                 </div>
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product18.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product18.jpg" alt=""></a>
                                         <div class="quick_button">
                                             <a href="#" data-bs-toggle="modal" data-bs-target="#modal_box"  title="quick view"> <i class="zmdi zmdi-eye"></i></a>
                                         </div>
@@ -2624,7 +2624,7 @@
                                 </div>
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product19.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product19.jpg" alt=""></a>
                                         <div class="label_product">
                                             <span class="label_sale">sale</span>
                                         </div>
@@ -2664,7 +2664,7 @@
                             <div class="product_carousel product_column4 owl-carousel">
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product23.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product23.jpg" alt=""></a>
                                         <div class="label_product">
                                             <span class="label_sale">sale</span>
                                         </div>
@@ -2700,7 +2700,7 @@
                                 </div>
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product24.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product24.jpg" alt=""></a>
                                         <div class="quick_button">
                                             <a href="#" data-bs-toggle="modal" data-bs-target="#modal_box"  title="quick view"> <i class="zmdi zmdi-eye"></i></a>
                                         </div>
@@ -2733,7 +2733,7 @@
                                 </div>
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product25.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product25.jpg" alt=""></a>
                                         <div class="label_product">
                                             <span class="label_sale">sale</span>
                                         </div>
@@ -2769,7 +2769,7 @@
                                 </div>
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product18.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product18.jpg" alt=""></a>
                                         <div class="quick_button">
                                             <a href="#" data-bs-toggle="modal" data-bs-target="#modal_box"  title="quick view"> <i class="zmdi zmdi-eye"></i></a>
                                         </div>
@@ -2802,7 +2802,7 @@
                                 </div>
                                 <div class="single_product">
                                     <div class="product_thumb">
-                                        <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product19.jpg" alt=""></a>
+                                        <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product19.jpg" alt=""></a>
                                         <div class="label_product">
                                             <span class="label_sale">sale</span>
                                         </div>
@@ -2853,7 +2853,7 @@
                 <div class="col-12">
                     <div class="single_banner">
                         <div class="banner_thumb">
-                            <a href="shop.html"><img src="{{asset('/')}}website/assets/img/bg/banner6.jpg" alt=""></a>
+                            <a href="shop.html"><img src="{{asset('/')}}website/img/bg/banner6.jpg" alt=""></a>
                         </div>
 
                     </div>
@@ -2875,7 +2875,7 @@
                         <div class="small_product_wrapper">
                             <div class="small_product_items">
                                 <div class="product_thumb">
-                                    <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product15.jpg" alt=""></a>
+                                    <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product15.jpg" alt=""></a>
                                 </div>
                                 <div class="product_content">
                                     <div class="product_name">
@@ -2898,7 +2898,7 @@
                             </div>
                             <div class="small_product_items">
                                 <div class="product_thumb">
-                                    <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product16.jpg" alt=""></a>
+                                    <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product16.jpg" alt=""></a>
                                 </div>
                                 <div class="product_content">
                                     <div class="product_name">
@@ -2921,7 +2921,7 @@
                             </div>
                             <div class="small_product_items">
                                 <div class="product_thumb">
-                                    <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product17.jpg" alt=""></a>
+                                    <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product17.jpg" alt=""></a>
                                 </div>
                                 <div class="product_content">
                                     <div class="product_name">
@@ -2944,7 +2944,7 @@
                             </div>
                             <div class="small_product_items">
                                 <div class="product_thumb">
-                                    <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product18.jpg" alt=""></a>
+                                    <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product18.jpg" alt=""></a>
                                 </div>
                                 <div class="product_content">
                                     <div class="product_name">
@@ -2967,7 +2967,7 @@
                             </div>
                             <div class="small_product_items">
                                 <div class="product_thumb">
-                                    <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product19.jpg" alt=""></a>
+                                    <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product19.jpg" alt=""></a>
                                 </div>
                                 <div class="product_content">
                                     <div class="product_name">
@@ -2990,7 +2990,7 @@
                             </div>
                             <div class="small_product_items">
                                 <div class="product_thumb">
-                                    <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product20.jpg" alt=""></a>
+                                    <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product20.jpg" alt=""></a>
                                 </div>
                                 <div class="product_content">
                                     <div class="product_name">
@@ -3013,7 +3013,7 @@
                             </div>
                             <div class="small_product_items">
                                 <div class="product_thumb">
-                                    <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product21.jpg" alt=""></a>
+                                    <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product21.jpg" alt=""></a>
                                 </div>
                                 <div class="product_content">
                                     <div class="product_name">
@@ -3036,7 +3036,7 @@
                             </div>
                             <div class="small_product_items">
                                 <div class="product_thumb">
-                                    <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product22.jpg" alt=""></a>
+                                    <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product22.jpg" alt=""></a>
                                 </div>
                                 <div class="product_content">
                                     <div class="product_name">
@@ -3059,7 +3059,7 @@
                             </div>
                             <div class="small_product_items">
                                 <div class="product_thumb">
-                                    <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product23.jpg" alt=""></a>
+                                    <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product23.jpg" alt=""></a>
                                 </div>
                                 <div class="product_content">
                                     <div class="product_name">
@@ -3091,7 +3091,7 @@
                         <div class="small_product_wrapper">
                             <div class="small_product_items">
                                 <div class="product_thumb">
-                                    <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product21.jpg" alt=""></a>
+                                    <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product21.jpg" alt=""></a>
                                 </div>
                                 <div class="product_content">
                                     <div class="product_name">
@@ -3114,7 +3114,7 @@
                             </div>
                             <div class="small_product_items">
                                 <div class="product_thumb">
-                                    <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product22.jpg" alt=""></a>
+                                    <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product22.jpg" alt=""></a>
                                 </div>
                                 <div class="product_content">
                                     <div class="product_name">
@@ -3137,7 +3137,7 @@
                             </div>
                             <div class="small_product_items">
                                 <div class="product_thumb">
-                                    <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product23.jpg" alt=""></a>
+                                    <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product23.jpg" alt=""></a>
                                 </div>
                                 <div class="product_content">
                                     <div class="product_name">
@@ -3160,7 +3160,7 @@
                             </div>
                             <div class="small_product_items">
                                 <div class="product_thumb">
-                                    <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product24.jpg" alt=""></a>
+                                    <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product24.jpg" alt=""></a>
                                 </div>
                                 <div class="product_content">
                                     <div class="product_name">
@@ -3183,7 +3183,7 @@
                             </div>
                             <div class="small_product_items">
                                 <div class="product_thumb">
-                                    <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product25.jpg" alt=""></a>
+                                    <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product25.jpg" alt=""></a>
                                 </div>
                                 <div class="product_content">
                                     <div class="product_name">
@@ -3206,7 +3206,7 @@
                             </div>
                             <div class="small_product_items">
                                 <div class="product_thumb">
-                                    <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product20.jpg" alt=""></a>
+                                    <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product20.jpg" alt=""></a>
                                 </div>
                                 <div class="product_content">
                                     <div class="product_name">
@@ -3229,7 +3229,7 @@
                             </div>
                             <div class="small_product_items">
                                 <div class="product_thumb">
-                                    <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product21.jpg" alt=""></a>
+                                    <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product21.jpg" alt=""></a>
                                 </div>
                                 <div class="product_content">
                                     <div class="product_name">
@@ -3252,7 +3252,7 @@
                             </div>
                             <div class="small_product_items">
                                 <div class="product_thumb">
-                                    <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product22.jpg" alt=""></a>
+                                    <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product22.jpg" alt=""></a>
                                 </div>
                                 <div class="product_content">
                                     <div class="product_name">
@@ -3275,7 +3275,7 @@
                             </div>
                             <div class="small_product_items">
                                 <div class="product_thumb">
-                                    <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product23.jpg" alt=""></a>
+                                    <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product23.jpg" alt=""></a>
                                 </div>
                                 <div class="product_content">
                                     <div class="product_name">
@@ -3307,7 +3307,7 @@
                         <div class="small_product_wrapper">
                             <div class="small_product_items">
                                 <div class="product_thumb">
-                                    <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product25.jpg" alt=""></a>
+                                    <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product25.jpg" alt=""></a>
                                 </div>
                                 <div class="product_content">
                                     <div class="product_name">
@@ -3330,7 +3330,7 @@
                             </div>
                             <div class="small_product_items">
                                 <div class="product_thumb">
-                                    <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product24.jpg" alt=""></a>
+                                    <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product24.jpg" alt=""></a>
                                 </div>
                                 <div class="product_content">
                                     <div class="product_name">
@@ -3353,7 +3353,7 @@
                             </div>
                             <div class="small_product_items">
                                 <div class="product_thumb">
-                                    <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product23.jpg" alt=""></a>
+                                    <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product23.jpg" alt=""></a>
                                 </div>
                                 <div class="product_content">
                                     <div class="product_name">
@@ -3376,7 +3376,7 @@
                             </div>
                             <div class="small_product_items">
                                 <div class="product_thumb">
-                                    <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product22.jpg" alt=""></a>
+                                    <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product22.jpg" alt=""></a>
                                 </div>
                                 <div class="product_content">
                                     <div class="product_name">
@@ -3399,7 +3399,7 @@
                             </div>
                             <div class="small_product_items">
                                 <div class="product_thumb">
-                                    <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product21.jpg" alt=""></a>
+                                    <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product21.jpg" alt=""></a>
                                 </div>
                                 <div class="product_content">
                                     <div class="product_name">
@@ -3422,7 +3422,7 @@
                             </div>
                             <div class="small_product_items">
                                 <div class="product_thumb">
-                                    <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product20.jpg" alt=""></a>
+                                    <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product20.jpg" alt=""></a>
                                 </div>
                                 <div class="product_content">
                                     <div class="product_name">
@@ -3445,7 +3445,7 @@
                             </div>
                             <div class="small_product_items">
                                 <div class="product_thumb">
-                                    <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product21.jpg" alt=""></a>
+                                    <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product21.jpg" alt=""></a>
                                 </div>
                                 <div class="product_content">
                                     <div class="product_name">
@@ -3468,7 +3468,7 @@
                             </div>
                             <div class="small_product_items">
                                 <div class="product_thumb">
-                                    <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product22.jpg" alt=""></a>
+                                    <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product22.jpg" alt=""></a>
                                 </div>
                                 <div class="product_content">
                                     <div class="product_name">
@@ -3491,7 +3491,7 @@
                             </div>
                             <div class="small_product_items">
                                 <div class="product_thumb">
-                                    <a href="product-details.html"><img src="{{asset('/')}}website/assets/img/product/product23.jpg" alt=""></a>
+                                    <a href="product-details.html"><img src="{{asset('/')}}website/img/product/product23.jpg" alt=""></a>
                                 </div>
                                 <div class="product_content">
                                     <div class="product_name">
@@ -3528,25 +3528,25 @@
                 <div class="col-12">
                     <div class="brand_container owl-carousel">
                         <div class="single_brand">
-                            <a href="#"><img src="{{asset('/')}}website/assets/img/brand/brand.png" alt=""></a>
+                            <a href="#"><img src="{{asset('/')}}website/img/brand/brand.png" alt=""></a>
                         </div>
                         <div class="single_brand">
-                            <a href="#"><img src="{{asset('/')}}website/assets/img/brand/brand1.png" alt=""></a>
+                            <a href="#"><img src="{{asset('/')}}website/img/brand/brand1.png" alt=""></a>
                         </div>
                         <div class="single_brand">
-                            <a href="#"><img src="{{asset('/')}}website/assets/img/brand/brand2.png" alt=""></a>
+                            <a href="#"><img src="{{asset('/')}}website/img/brand/brand2.png" alt=""></a>
                         </div>
                         <div class="single_brand">
-                            <a href="#"><img src="{{asset('/')}}website/assets/img/brand/brand3.png" alt=""></a>
+                            <a href="#"><img src="{{asset('/')}}website/img/brand/brand3.png" alt=""></a>
                         </div>
                         <div class="single_brand">
-                            <a href="#"><img src="{{asset('/')}}website/assets/img/brand/brand4.png" alt=""></a>
+                            <a href="#"><img src="{{asset('/')}}website/img/brand/brand4.png" alt=""></a>
                         </div>
                         <div class="single_brand">
-                            <a href="#"><img src="{{asset('/')}}website/assets/img/brand/brand5.png" alt=""></a>
+                            <a href="#"><img src="{{asset('/')}}website/img/brand/brand5.png" alt=""></a>
                         </div>
                         <div class="single_brand">
-                            <a href="#"><img src="{{asset('/')}}website/assets/img/brand/brand1.png" alt=""></a>
+                            <a href="#"><img src="{{asset('/')}}website/img/brand/brand1.png" alt=""></a>
                         </div>
                     </div>
                     <div class="newsletter_inner">
