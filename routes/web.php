@@ -77,6 +77,10 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',
     Route::get('/product/delete/{id}',[ProductController::class,'delete'])->name('product.delete');
 
     Route::get('/order/index',[AdminOrderController::class,'index'])->name('order.index');
+    Route::get('/order/details/{id}',[AdminOrderController::class,'detail'])->name('order.detail');
+    Route::get('/order/edit/{id}',[AdminOrderController::class,'edit'])->name('order.edit');
+    Route::post('/order/update/{id}',[AdminOrderController::class,'update'])->name('order.update');
+    Route::get('/order/delete/{id}',[AdminOrderController::class,'delete'])->name('order.delete');
 });
 
 

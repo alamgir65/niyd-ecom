@@ -20,6 +20,7 @@ class CheckoutController extends Controller
     }
     public function newCustomer(Request $request){
         Customer::newCustomer($request);
+        $this->customer = Customer::where('email',$request->email)->first();
         Session::put('id', $this->customer->id);
         Session::put('name', $this->customer->name);
         return redirect('/checkout/billing-info');

@@ -21,4 +21,10 @@ class OrderDetail extends Model
             Cart::remove($item->rowId);
         }
     }
+    public static function deleteOrderDetails($orderId){
+        self::$orderDetail = OrderDetail::where('order_id',$orderId)->get();
+        foreach (self::$orderDetail as $orderDetails){
+            $orderDetails->delete();
+        }
+    }
 }

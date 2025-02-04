@@ -26,7 +26,7 @@
                                 <td>{{$order->order_total}}</td>
                                 <td>{{$order->order_status}}</td>
                                 <td>
-                                    <a href="" class="btn btn-secondary">
+                                    <a href="{{route('order.detail',['id' => $order->id])}}" class="btn btn-secondary">
                                         Detail
                                     </a>
                                     <a href="" class="btn btn-primary">
@@ -35,10 +35,10 @@
                                     <a href="" class="btn btn-info">
                                         Print
                                     </a>
-                                    <a href="" class="btn btn-warning">
+                                    <a href="{{route('order.edit',['id' => $order->id])}}" class="btn btn-warning">
                                         <i class="fa fa-edit"></i>
                                     </a>
-                                    <a href="" class="btn btn-danger" onclick="confirm('Are you sure want to delete this brand?')">
+                                    <a href="{{route('order.delete',['id' => $order->id])}}" class="btn btn-danger" onclick="confirm('Are you sure want to delete this brand?')">
                                         <i class="fa fa-trash"></i>
                                     </a>
                                 </td>
