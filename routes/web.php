@@ -12,6 +12,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\SubCategoryController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\UnitController;
+use App\Http\Controllers\CourierController;
 use App\Http\Controllers\AdminOrderController;
 Route::get('/',[WebsiteController::class,'index'])->name('home');
 Route::get('/contact-us',[WebsiteController::class,'contact'])->name('contact');
@@ -67,6 +68,9 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',
     Route::post('/unit/update/{id}',[UnitController::class,'update'])->name('unit.update');
     Route::get('/unit/delete/{id}',[UnitController::class,'delete'])->name('unit.delete');
 
+    Route::get('/courier/index',[CourierController::class,'index'])->name('courier.index');
+    Route::get('/courier/create',[CourierController::class,'create'])->name('courier.create');
+
     Route::get('/product/create',[ProductController::class,'create'])->name('product.create');
     Route::get('/getSubCategoryByCategory',[ProductController::class,'getSubCategoryByCategory'])->name('get-sub-category-by-category');
     Route::get('/product/index',[ProductController::class,'index'])->name('product.index');
@@ -81,6 +85,7 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',
     Route::get('/order/edit/{id}',[AdminOrderController::class,'edit'])->name('order.edit');
     Route::post('/order/update/{id}',[AdminOrderController::class,'update'])->name('order.update');
     Route::get('/order/delete/{id}',[AdminOrderController::class,'delete'])->name('order.delete');
+    Route::get('/order/invoice/{id}',[AdminOrderController::class,'invoice'])->name('order.invoice');
 });
 
 

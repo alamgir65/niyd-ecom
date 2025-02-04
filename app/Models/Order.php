@@ -22,15 +22,15 @@ class Order extends Model
         self::$order->save();
         return self::$order->id;
     }
-    public static function updateOrder($request,$id){
-        self::$order = Order::find($id);
-
-        self::$order->order_total = $request->order_total;
-        self::$order->order_status = $request->order_status;
-        self::$order->courier_id = $request->courier_id;
-        self::$order->delivery_address = $request->delivery_address;
-        self::$order->save();
-    }
+//    public static function updateOrder($request,$id){
+//        self::$order = Order::find($id);
+//
+//        self::$order->order_total = $request->order_total;
+//        self::$order->order_status = $request->order_status;
+//        self::$order->courier_id = $request->courier_id;
+//        self::$order->delivery_address = $request->delivery_address;
+//        self::$order->save();
+//    }
     public static function deleteOrder($id){
         self::$order = Order::find($id);
         self::$order->delete();

@@ -28,22 +28,22 @@
                         <div class="col-sm-10">
                             <select name="order_status" class="form-control">
                                 <option value="">--- Order Status ----</option>
-                                <option value="pending">Pending</option>
-                                <option value="processing">Processing</option>
-                                <option value="complete">Complete</option>
-                                <option value="cancel">Cancel</option>
+                                <option value="Pending" {{$order->order_status=='Pending'?'selected':''}}>Pending</option>
+                                <option value="Processing" {{$order->order_status=='Processing'?'selected':''}}>Processing</option>
+                                <option value="Complete" {{$order->order_status=='Complete'?'selected':''}}>Complete</option>
+                                <option value="Cancel" {{$order->order_status=='Cancel'?'selected':''}}>Cancel</option>
                             </select>
                         </div>
                     </div>
                     <div class="row mb-4">
-                        <label class="col-sm-2 col-form-label" for="basic-default-name">Order Status</label>
+                        <label class="col-sm-2 col-form-label" for="basic-default-name">Courier Info</label>
                         <div class="col-sm-10">
                             <select name="courier_id" class="form-control">
                                 <option value="">--- Select Courier ----</option>
-                                <option value="1">Sondharban</option>
-                                <option value="2">SA Poribahan</option>
-                                <option value="3">Pathao</option>
-                                <option value="4">Korota</option>
+                                <option value="1" {{$order->courier_id==1?'selected':''}}>Sondharban</option>
+                                <option value="2" {{$order->courier_id==2?'selected':''}}>SA Poribahan</option>
+                                <option value="3" {{$order->courier_id==3?'selected':''}}>Pathao</option>
+                                <option value="4" {{$order->courier_id==4?'selected':''}}>Korota</option>
                             </select>
                         </div>
                     </div>

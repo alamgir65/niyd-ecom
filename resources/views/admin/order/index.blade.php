@@ -7,6 +7,7 @@
             <div class="card">
                 <div class="card-datatable pt-0">
                     <table class="table table-bordered">
+                        <span class="text-success">{{session('message')}}</span>
                         <thead>
                         <tr>
                             <th>Sl</th>
@@ -29,7 +30,7 @@
                                     <a href="{{route('order.detail',['id' => $order->id])}}" class="btn btn-secondary">
                                         Detail
                                     </a>
-                                    <a href="" class="btn btn-primary">
+                                    <a href="{{route('order.invoice',['id'=>$order->id])}}" class="btn btn-primary">
                                         Invoice
                                     </a>
                                     <a href="" class="btn btn-info">

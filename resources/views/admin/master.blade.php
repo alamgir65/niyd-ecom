@@ -42,6 +42,9 @@
     <link rel="stylesheet" href="{{asset('/')}}admin/assets/vendor/libs/typeahead-js/typeahead.css" />
     <link rel="stylesheet" href="{{asset('/')}}admin/assets/vendor/libs/apex-charts/apex-charts.css" />
 
+
+{{--    Styles for invoice --}}
+    @yield('invoice-style')
     <!-- Page CSS -->
 
 
