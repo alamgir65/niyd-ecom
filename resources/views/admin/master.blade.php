@@ -204,6 +204,25 @@
                         </li>
                     </ul>
                 </li>
+                <li class="menu-item">
+                    <a href="javascript:void(0);" class="menu-link menu-toggle">
+                        <i class='menu-icon tf-icons ri-graduation-cap-line'></i>
+                        <div>Courier Module</div>
+                    </a>
+                    <ul class="menu-sub">
+                        <li class="menu-item">
+                            <a href="{{route('courier.create')}}" class="menu-link">
+                                <div>Add Courier</div>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="{{route('courier.index')}}" class="menu-link">
+                                <div>Manage Courier</div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
                 <!-- Academy menu end -->
                 <li class="menu-item">
                     <a href="javascript:void(0);" class="menu-link menu-toggle">

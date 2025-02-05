@@ -105,7 +105,7 @@
                     <div class="invoice-box">
                         <table cellpadding="0" cellspacing="0">
                             <tr class="top">
-                                <td colspan="2">
+                                <td colspan="4">
                                     <table>
                                         <tr>
                                             <td class="title">
@@ -126,7 +126,7 @@
                             </tr>
 
                             <tr class="information">
-                                <td colspan="2">
+                                <td colspan="4">
                                     <table>
                                         <tr>
                                             <td>
@@ -150,46 +150,48 @@
                             </tr>
 
                             <tr class="heading">
-                                <td>Payment Method</td>
+                                <td colspan="3">Payment Method</td>
 
                                 <td>{{$order->payment_method}}</td>
                             </tr>
 
                             <tr class="details">
-                                <td>{{$order->payment_method}}</td>
+                                <td colspan="3">{{$order->payment_method}}</td>
 
                                 <td>{{$order->order_total}}</td>
                             </tr>
 
                             <tr class="heading">
                                 <td>Item</td>
-
-                                <td>Price</td>
+                                <td align="center">Unit Price (BDT)</td>
+                                <td align="center">Quantity</td>
+                                <td align="right">Price (BDT)</td>
                             </tr>
                             @php($sum=0)
                             @foreach($order->orderDetails as $orderDetail)
                             <tr class="item">
                                 <td>{{$orderDetail->product_name}}</td>
-
-                                <td>{{$orderDetail->product_price}}</td>
-                                @php($sum += $orderDetail->product_price)
+                                <td align="">{{$orderDetail->product_price}}</td>
+                                <td align="center">{{$orderDetail->product_qty}}</td>
+                                <td align="right">{{$orderDetail->product_price * $orderDetail->product_qty}}</td>
+                                @php($sum += $orderDetail->product_price * $orderDetail->product_qty)
                             </tr>
                             @endforeach
                             <tr class="item">
-                                <td>Shipping Total</td>
+                                <td colspan="3">Shipping Total</td>
 
                                 <td>{{$order->shipping_total}}</td>
-                                @php($sum += $orderDetail->shipping_total)
+                                @php($sum += $order->shipping_total)
                             </tr>
                             <tr class="item">
-                                <td>Tax Total</td>
+                                <td colspan="3">Tax Total</td>
 
                                 <td>{{$order->tax_total}}</td>
-                                @php($sum += $orderDetail->tax_total)
+                                @php($sum += $order->tax_total)
                             </tr>
                             <tr class="total">
                                 <td></td>
-                                <td>Total: {{$sum}}</td>
+                                <td colspan="3">Total: BDT   {{$sum}}</td>
                             </tr>
                         </table>
                     </div>

@@ -14,8 +14,31 @@ class Courier extends Model
         self::$courier->status = $request->status;
         self::$courier->address = $request->address;
         self::$courier->description = $request->description;
-        self::$courier->image = self::getImageUrl($request);
+        self::$courier->logo = self::getImageUrl($request);
         self::$courier->save();
+    }
+    public static function updateCourier($request,$id){
+        self::$courier = Courier::find($id);
+
+        if($request->file('logo')){
+            unlink(self::$courier->logo);
+            self::$imageUrl = self::getImageUrl($request);
+        }
+        else{
+            self::$imageUrl = self::$courier->logo;
+        }
+
+        self::$courier->name = $request->name;
+        self::$courier->email = $request->email;
+        self::$courier->status = $request->status;
+        self::$courier->address = $request->address;
+        self::$courier->description = $request->description;
+        self::$courier->logo = self::$imageUrl;
+        self::$courier->save();
+    }
+    public static function deleteCourier($id){
+        self::$courier = Courier::find($id);
+        self::$courier->delete();
     }
     public static function getImageUrl($request){
         self::$image = $request->file('logo');

@@ -40,10 +40,9 @@
                         <div class="col-sm-10">
                             <select name="courier_id" class="form-control">
                                 <option value="">--- Select Courier ----</option>
-                                <option value="1" {{$order->courier_id==1?'selected':''}}>Sondharban</option>
-                                <option value="2" {{$order->courier_id==2?'selected':''}}>SA Poribahan</option>
-                                <option value="3" {{$order->courier_id==3?'selected':''}}>Pathao</option>
-                                <option value="4" {{$order->courier_id==4?'selected':''}}>Korota</option>
+                                @foreach($couriers as $key => $courier)
+                                    <option value="{{$key}}" {{$order->courier_id==$key?'selected':''}}>{{$courier->name}}</option>
+                                @endforeach
                             </select>
                         </div>
                     </div>

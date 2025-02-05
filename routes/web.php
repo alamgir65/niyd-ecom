@@ -70,6 +70,10 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',
 
     Route::get('/courier/index',[CourierController::class,'index'])->name('courier.index');
     Route::get('/courier/create',[CourierController::class,'create'])->name('courier.create');
+    Route::post('/courier/store',[CourierController::class,'store'])->name('courier.store');
+    Route::get('/courier/edit/{id}',[CourierController::class,'edit'])->name('courier.edit');
+    Route::post('/courier/update/{id}',[CourierController::class,'update'])->name('courier.update');
+    Route::get('/courier/delete/{id}',[CourierController::class,'delete'])->name('courier.delete');
 
     Route::get('/product/create',[ProductController::class,'create'])->name('product.create');
     Route::get('/getSubCategoryByCategory',[ProductController::class,'getSubCategoryByCategory'])->name('get-sub-category-by-category');
@@ -86,6 +90,7 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',
     Route::post('/order/update/{id}',[AdminOrderController::class,'update'])->name('order.update');
     Route::get('/order/delete/{id}',[AdminOrderController::class,'delete'])->name('order.delete');
     Route::get('/order/invoice/{id}',[AdminOrderController::class,'invoice'])->name('order.invoice');
+    Route::get('/order/invoice-print/{id}',[AdminOrderController::class,'invoicePrint'])->name('order.invoice-print');
 });
 
 
