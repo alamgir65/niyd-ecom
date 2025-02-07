@@ -15,6 +15,7 @@ use App\Http\Controllers\UnitController;
 use App\Http\Controllers\CourierController;
 use App\Http\Controllers\AdminOrderController;
 use App\Http\Controllers\SslCommerzPaymentController;
+use App\Http\Controllers\AdminCustomerController;
 
 Route::get('/',[WebsiteController::class,'index'])->name('home');
 Route::get('/contact-us',[WebsiteController::class,'contact'])->name('contact');
@@ -106,6 +107,9 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',
     Route::get('/order/delete/{id}',[AdminOrderController::class,'delete'])->name('order.delete');
     Route::get('/order/invoice/{id}',[AdminOrderController::class,'invoice'])->name('order.invoice');
     Route::get('/order/invoice-print/{id}',[AdminOrderController::class,'invoicePrint'])->name('order.invoice-print');
+
+    Route::get('/admin/customer/index',[AdminCustomerController::class,'index'])->name('admin.customer-index');
+    Route::get('/admin/customer/create',[AdminCustomerController::class,'create'])->name('admin.customer-add');
 });
 
 

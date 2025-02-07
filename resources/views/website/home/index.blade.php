@@ -37,7 +37,7 @@
                                 <i class="zmdi zmdi-local-shipping zmdi-hc-fw"></i>
                             </div>
                             <div class="shipping_content">
-                                <p>Free Shipping On Orders Over $99</p>
+                                <p>Free Shipping On Orders Over BDT  5000</p>
                             </div>
                         </div>
                         <div class="single_shipping">
@@ -59,20 +59,20 @@
                     </div>
                     <!--shipping area end-->
                     <div class="slider_area owl-carousel">
-                        <div class="single_slider" data-bg img="{{asset('/')}}slider1.jpg">
+                        <div class="single_slider" style="background-image: url('{{ asset('website/img/slider/slider1.jpg') }}');">
                             <div class="slider_content content_position_center">
                                 <h1>New</h1>
-                                <h2>Designer Funiture! </h2>
+                                <h2>Designer Furniture! </h2>
                                 <span>elite collections! </span>
-                                <a href="shop.html">shop now</a>
+                                <a href="{{route('product-category',['id' => -1])}}">shop now</a>
                             </div>
                         </div>
-                        <div class="single_slider d-flex align-items-center" data-bg img="{{asset('/')}}website/img/slider/slider2.jpg">
+                        <div class="single_slider d-flex align-items-center" style="background-image: url('{{ asset('website/img/slider/slider2.jpg') }}');">
                             <div class="slider_content content_position_left">
                                 <h1>New</h1>
-                                <h2>Designer Funiture! </h2>
+                                <h2>Designer Furniture! </h2>
                                 <span>elite collections! </span>
-                                <a href="shop.html">shop now</a>
+                                <a href="{{route('product-category',['id' => -1])}}">shop now</a>
                             </div>
                         </div>
                     </div>
@@ -90,54 +90,16 @@
             <div class="row">
                 <div class="col-12">
                     <div class="category_product_carousel category_column4 owl-carousel">
+                        @foreach($categories as $category)
                         <div class="single_category_product">
                             <div class="category_product_thumb">
-                                <a href="shop.html"><img src="{{asset('/')}}website/img/category/category1.jpg" alt=""></a>
+                                <a href="{{route('product-category',['id' => $category->id])}}"><img src="{{asset($category->image)}}" alt=""></a>
                             </div>
                             <div class="category_product_name">
-                                <h2><a href="shop.html">television</a></h2>
+                                <h2><a href="{{route('product-category',['id' => $category->id])}}">{{$category->name}}</a></h2>
                             </div>
                         </div>
-                        <div class="single_category_product">
-                            <div class="category_product_thumb">
-                                <a href="shop.html"><img src="{{asset('/')}}website/img/category/category2.jpg" alt=""></a>
-                            </div>
-                            <div class="category_product_name">
-                                <h2><a href="shop.html">audio</a></h2>
-                            </div>
-                        </div>
-                        <div class="single_category_product">
-                            <div class="category_product_thumb">
-                                <a href="shop.html"><img src="{{asset('/')}}website/img/category/category3.jpg" alt=""></a>
-                            </div>
-                            <div class="category_product_name">
-                                <h2><a href="shop.html">Camera</a></h2>
-                            </div>
-                        </div>
-                        <div class="single_category_product">
-                            <div class="category_product_thumb">
-                                <a href="shop.html"><img src="{{asset('/')}}website/img/category/category4.jpg" alt=""></a>
-                            </div>
-                            <div class="category_product_name">
-                                <h2><a href="shop.html">lundry</a></h2>
-                            </div>
-                        </div>
-                        <div class="single_category_product">
-                            <div class="category_product_thumb">
-                                <a href="shop.html"><img src="{{asset('/')}}website/img/category/category5.jpg" alt=""></a>
-                            </div>
-                            <div class="category_product_name">
-                                <h2><a href="shop.html">cooling</a></h2>
-                            </div>
-                        </div>
-                        <div class="single_category_product">
-                            <div class="category_product_thumb">
-                                <a href="shop.html"><img src="{{asset('/')}}website/img/category/category2.jpg" alt=""></a>
-                            </div>
-                            <div class="category_product_name">
-                                <h2><a href="shop.html">audio</a></h2>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -172,7 +134,12 @@
                                     @foreach($categories as $key1 => $category)
                                         <div class="tab-pane fade show active {{$key1 == 0 ? 'active' : ''}}" id="Funiture{{$key1}}" role="tabpanel">
                                             <div class="deals_product_list">
-                                                @foreach($category->products as $product)
+                                                @foreach($category->products as $key2 => $product)
+                                                    <?php
+                                                        if($key2 > 1){
+                                                            break;
+                                                        }
+                                                    ?>
                                                     <div class="single_deals_product">
                                                         <div class="product_thumb">
                                                             <a href="{{route('product-details',['id' => $product->id])}}"><img src="{{asset($product->image)}}" alt=""></a>
@@ -461,7 +428,7 @@
                         <div class="single_product_left_sidebar">
                             @foreach($new_products_left as $product)
                                 <div class="single_product">
-                                <div class="product_thumb">
+                                <div class="product_thumb" style="height: 220px !important;">
                                     <a href="{{route('product-details',['id' => $product->id])}}"><img src="{{asset($product->image)}}" alt="img"></a>
                                     <div class="label_product">
                                         <span class="label_sale">sale</span>
@@ -500,14 +467,14 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <div class="single_product product_center">
-                            <div class="product_thumb">
+                        <div class="single_product product_center" >
+                            <div class="product_thumb" >
                                 <a href="{{route('product-details',['id' => $product->id])}}"><img src="{{asset($new_product_mid->image)}}" alt="img"></a>
                                 <div class="quick_button">
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#modal_box"  title="quick view"> <i class="zmdi zmdi-eye"></i></a>
                                 </div>
                             </div>
-                            <div class="product_content">
+                            <div class="product_content" >
                                 <div class="product_name">
                                     <h3><a href="{{route('product-details',['id' => $product->id])}}">{{$new_product_mid->name}}</a></h3>
                                 </div>
@@ -538,7 +505,7 @@
                         <div class="single_product_right_sidebar">
                             @foreach($new_products_right as $product)
                                 <div class="single_product">
-                                <div class="product_thumb">
+                                <div class="product_thumb" style="height: 220px !important;">
                                     <a href="{{route('product-details',['id' => $product->id])}}"><img src="{{asset($product->image)}}" alt="img"></a>
                                     <div class="label_product">
                                         <span class="label_sale">sale</span>

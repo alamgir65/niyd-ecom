@@ -34,8 +34,8 @@ class CheckoutController extends Controller
         $this->customer = Customer::where('email',$request->email)->first();
         if($this->customer){
             if (password_verify($request->password,$this->customer->password)){
-                session::put('id',$this->customer->id);
-                session::put('name',$this->customer->name);
+                Session::put('id',$this->customer->id);
+                Session::put('name',$this->customer->name);
 
                 return redirect('/checkout/billing-info');
             }else{

@@ -69,9 +69,9 @@
                     <div class="row no-gutters shop_wrapper">
                         @foreach($products as $product)
                         <div class="col-lg-3 col-md-4 col-12 ">
-                            <div class="single_product">
-                                <div class="product_thumb">
-                                    <a href="{{route('product-details',['id'=>$product->id])}}"><img src="{{asset($product->image)}}" alt=""></a>
+                            <div class="single_product" >
+                                <div class="product_thumb" style="height: 250px !important;">
+                                    <a href="{{route('product-details',['id'=>$product->id])}}"><img height="50%" width="300px" src="{{asset($product->image)}}" alt=""></a>
                                     <div class="label_product">
                                         <span class="label_sale">sale</span>
                                     </div>

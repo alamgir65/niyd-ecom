@@ -263,12 +263,12 @@
                     </a>
                     <ul class="menu-sub">
                         <li class="menu-item">
-                            <a href="app-user-list.html" class="menu-link">
+                            <a href="{{route('admin.customer-add')}}" class="menu-link">
                                 <div>Add Customer</div>
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="app-user-list.html" class="menu-link">
+                            <a href="{{route('admin.customer-index')}}" class="menu-link">
                                 <div>Manage Customer</div>
                             </a>
                         </li>
