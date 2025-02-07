@@ -65,6 +65,10 @@
                                     </tbody>
                                 </table>
                             </div>
+
+                            <?php
+                            Session::put('subtotal',$sum);
+                            ?>
                             <div class="cart_submit">
                                 <button type="submit">update cart</button>
                             </div>

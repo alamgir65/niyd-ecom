@@ -8,6 +8,7 @@ use Cart;
 use App\Models\Customer;
 use Illuminate\Http\Request;
 use Session;
+use App\Http\Controllers\SslCommerzPaymentController;
 
 class CheckoutController extends Controller
 {
@@ -47,9 +48,17 @@ class CheckoutController extends Controller
     private $orderId;
     public function newOrder(Request $request)
     {
-        $this->orderId = Order::newOrder($request);
-        OrderDetail::newOrderDetail($this->orderId);
-        return redirect('/checkout/complete-order')->with('message','you Order info successfully . Place wait we will Connect With you soon');
+//        return $request;
+        if($request->payment_method == 'cash'){
+            $this->orderId = Order::newOrder($request);
+            OrderDetail::newOrderDetail($this->orderId);
+            return redirect('/checkout/complete-order')->with('message','you Order info successfully . Place wait we will Connect With you soon');
+        }
+        elseif($request->payment_method == 'online'){
+            $sslCommerzPayment = new SslCommerzPaymentController();
+            $sslCommerzPayment->index($request);
+        }
+
     }
     public function completeOrder(Request $request){
         return view('website.checkout.complete-order');

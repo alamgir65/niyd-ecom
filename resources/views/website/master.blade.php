@@ -115,7 +115,7 @@
                             </form>
                         </div>
                         <div class="mini_cart_wrapper">
-                            <a href="javascript:void(0)"><i class="zmdi zmdi-shopping-basket"></i> <span>{{count(Cart::content())}} items -BDT {{Cart::total()}}</span> </a>
+                            <a href="javascript:void(0)"><i class="zmdi zmdi-shopping-basket"></i> <span>{{count(Cart::content())}} items -BDT {{Session::get('subtotal')}}</span> </a>
                             <!--mini cart-->
                             <div class="mini_cart">
 
@@ -128,7 +128,7 @@
                                         <a href="#">{{$item->name}}</a>
 
                                         <span class="quantity">Qty: {{$item->qty}}</span>
-                                        <span class="price_cart">{{$item->price}}</span>
+                                        <span class="price_cart">Price: {{$item->price}}</span>
 
                                     </div>
                                     <div class="cart_remove">
@@ -139,14 +139,14 @@
                                 <div class="mini_cart_table">
                                     <div class="cart_total">
                                         <span>Subtotal:</span>
-                                        <span class="price">{{Cart::total()}}</span>
+                                        <span class="price">{{Session::get('subtotal')}}</span>
                                     </div>
                                 </div>
 
                                 <div class="mini_cart_footer">
                                     <div class="cart_button">
                                         <a href="{{route('cart.index')}}">View cart</a>
-                                        <a href="checkout.html">Checkout</a>
+                                        <a href="{{route('cart.index')}}">Checkout</a>
                                     </div>
                                 </div>
                             </div>

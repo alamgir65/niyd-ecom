@@ -27,7 +27,7 @@
             <div class="checkout_form">
                 <div class="row">
                     <div class="col-lg-6 col-md-6">
-                        <form action="{{route('checkout.new-order')}}" method="POST">
+                        <form action="{{route('checkout.new-order')}}" method="POST" target="_blank">
                             @csrf
                             <h3>Billing Details</h3>
                             <div class="row">
@@ -76,7 +76,7 @@
                                     <tfoot>
                                     <tr>
                                         <th>Cart Subtotal</th>
-                                        <td>{{$sum}}</td>
+                                        <td>{{$sub_total = $sum}}</td>
                                     </tr>
                                     <tr>
                                         <th>Tax Amount</th>
@@ -96,6 +96,7 @@
                                 Session::put('order_total', $orderTotal);
                                 Session::put('tax_total', $tax);
                                 Session::put('shipping_total', $shipping);
+                                Session::put('order_sub_total', $sub_total);
 
                                 ?>
                             </div>
