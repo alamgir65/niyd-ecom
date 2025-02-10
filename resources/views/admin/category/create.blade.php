@@ -15,6 +15,9 @@
                         <label class="col-sm-2 col-form-label" for="basic-default-name">Category Name</label>
                         <div class="col-sm-10">
                             <input type="text" name="name" class="form-control" id="basic-default-name" placeholder="Category Name" />
+                            @error('name')
+                                <span class="text-danger">{{$message}}</span>
+                            @enderror
                         </div>
                     </div>
                     <div class="row mb-4">

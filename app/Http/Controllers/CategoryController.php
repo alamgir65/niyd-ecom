@@ -16,6 +16,14 @@ class CategoryController extends Controller
         return view('admin.category.create');
     }
     public function store(Request $request){
+        $request->validate([
+            'name' => 'required',
+            'image' => 'required',
+            'status' => 'required',
+            'description' => 'required',
+        ],[
+            'name' => 'Enter your name'
+        ]);
         Category::newCategory($request);
         return back()->with('message','Category added successfully');
     }
