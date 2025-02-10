@@ -170,10 +170,10 @@ class SslCommerzPaymentController extends Controller
     public function success(Request $request)
     {
 //        return $request;
-//        $customer = Customer::find($request->value_a);
+        $customer = Customer::find($request->value_a);
 //        return $customer;
-//        Session::put('id',$request->value_a);
-//        Session::put('name',$customer->name);
+        Session::put('id',$request->value_a);
+        Session::put('name',$customer->name);
         echo "Transaction is Successful";
 
         $tran_id = $request->input('tran_id');

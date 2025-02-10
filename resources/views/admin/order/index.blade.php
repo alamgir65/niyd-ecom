@@ -22,7 +22,7 @@
                         @foreach($orders as $order)
                             <tr>
                                 <td>{{$loop->iteration}}</td>
-                                <td>{{$order->customer->name}}</td>
+                                <td>{{isset($order->customer->name)?$order->customer->name:''}}</td>
                                 <td>{{$order->order_date}}</td>
                                 <td>{{$order->order_total}}</td>
                                 <td>{{$order->order_status}}</td>

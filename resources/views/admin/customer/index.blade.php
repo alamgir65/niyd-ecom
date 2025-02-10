@@ -25,8 +25,12 @@
                                 <td>{{$customer->mobile}}</td>
                                 <td>{{$customer->status == 1? 'Published':'Unpublished'}}</td>
                                 <td>
-                                    <a href="" class="btn btn-success my-1">Details</a>
-                                    <a href="" class="btn btn-danger my-1">Delete</a>
+                                    <a href="{{route('admin.customer-details',['id'=>$customer->id])}}" class="btn btn-success my-1">
+                                        <i class="fa-regular fa-eye"></i>
+                                    </a>
+                                    <a href="" class="btn btn-danger my-1">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </a>
                                 </td>
                             </tr>
                         @endforeach

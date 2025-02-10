@@ -30,7 +30,9 @@ class WebsiteController extends Controller
         return view('website.category.index',['products' => $this->products]);
     }
     public function productDetails($id){
-        return view('website.product.detail',['product' => Product::find($id)]);
+        $product = Product::find($id);
+        $related_products = Product::where('category_id',$product->category_id)->get();
+        return view('website.product.detail',['product' => Product::find($id),'related_products' => $related_products]);
     }
     public function contact(){
         return view('website.home.contact');

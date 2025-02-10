@@ -110,6 +110,7 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',
 
     Route::get('/admin/customer/index',[AdminCustomerController::class,'index'])->name('admin.customer-index');
     Route::get('/admin/customer/create',[AdminCustomerController::class,'create'])->name('admin.customer-add');
+    Route::get('/admin/customer/details/{id}',[AdminCustomerController::class,'details'])->name('admin.customer-details');
 });
 
 

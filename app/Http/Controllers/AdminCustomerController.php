@@ -13,4 +13,7 @@ class AdminCustomerController extends Controller
     public function create(){
         return view('admin.customer.create');
     }
+    public function details($id){
+        return view('admin.customer.detail',['customer' => Customer::find($id)]);
+    }
 }
