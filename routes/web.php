@@ -16,6 +16,7 @@ use App\Http\Controllers\CourierController;
 use App\Http\Controllers\AdminOrderController;
 use App\Http\Controllers\SslCommerzPaymentController;
 use App\Http\Controllers\AdminCustomerController;
+use App\Http\Controllers\UserController;
 
 Route::get('/',[WebsiteController::class,'index'])->name('home');
 Route::get('/contact-us',[WebsiteController::class,'contact'])->name('contact');
@@ -111,6 +112,8 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',
     Route::get('/admin/customer/index',[AdminCustomerController::class,'index'])->name('admin.customer-index');
     Route::get('/admin/customer/create',[AdminCustomerController::class,'create'])->name('admin.customer-add');
     Route::get('/admin/customer/details/{id}',[AdminCustomerController::class,'details'])->name('admin.customer-details');
+
+    Route::resource('user',UserController::class);
 });
 
 

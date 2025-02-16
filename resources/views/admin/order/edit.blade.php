@@ -41,7 +41,7 @@
                             <select name="courier_id" class="form-control">
                                 <option value="">--- Select Courier ----</option>
                                 @foreach($couriers as $key => $courier)
-                                    <option value="{{$key}}" {{$order->courier_id==$key?'selected':''}}>{{$courier->name}}</option>
+                                    <option value="{{$courier->id}}" {{$order->courier_id==$courier->id?'selected':''}}>{{$courier->name}}</option>
                                 @endforeach
                             </select>
                         </div>
