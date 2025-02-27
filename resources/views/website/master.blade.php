@@ -54,13 +54,13 @@
                                 @if(Session::get('id'))
                                     <a href="#"><i class="zmdi zmdi-account"></i>{{Session::get('name')}}<i class="zmdi zmdi-caret-down"></i></a>
                                     <ul class="dropdown_links">
-                                        <li><a href="#">My Dashboard </a></li>
+                                        <li><a href="{{route('customer.dashboard')}}">My Dashboard </a></li>
                                         <li><a href="{{route('customer.logout')}}">Logout</a></li>
                                     </ul>
                                 @else
                                     <a href="#"><i class="zmdi zmdi-account"></i> My account <i class="zmdi zmdi-caret-down"></i></a>
                                     <ul class="dropdown_links">
-                                        <li><a href="{{route('checkout.index')}}">Sign Up / Login</a></li>
+                                        <li><a href="{{route('customer.signUp-login')}}">Sign Up / Login</a></li>
                                         <li><a href="{{route('customer.login-register')}}">Shopping Cart</a></li>
                                         <li><a href="wishlist.html">Wishlist</a></li>
                                     </ul>

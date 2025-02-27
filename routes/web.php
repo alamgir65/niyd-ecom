@@ -17,6 +17,7 @@ use App\Http\Controllers\AdminOrderController;
 use App\Http\Controllers\SslCommerzPaymentController;
 use App\Http\Controllers\AdminCustomerController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\CustomerDashboardController;
 
 Route::get('/',[WebsiteController::class,'index'])->name('home');
 Route::get('/contact-us',[WebsiteController::class,'contact'])->name('contact');
@@ -38,6 +39,19 @@ Route::post('/checkout/new-order', [CheckoutController::class, 'newOrder'])->nam
 Route::get('/checkout/complete-order',[CheckoutController::class,'completeOrder'])->name('checkout.complete-order');
 Route::get('/customer/login-signup',[CustomerAuthController::class,'index'])->name('customer.login-register');
 Route::get('/customer/logout',[CustomerAuthController::class,'logout'])->name('customer.logout');
+
+//Route::get('/customer/index',[CustomerAuthController::class,'index'])->name('customer.index');
+Route::get('/customer/login-SignUp',[CustomerAuthController::class,'index'])->name('customer.signUp-login');
+Route::post('/customer/login',[CustomerAuthController::class,'loginCheck'])->name('customer.login');
+Route::post('/customer/register',[CustomerAuthController::class,'register'])->name('customer.register');
+
+Route::middleware(['customer'])->group(function (){
+    Route::get('/customer/dashboard/profile',[CustomerDashboardController::class,'profile'])->name('customer.dashboard.profile');
+    Route::get('/customer/dashboard/wishlist',[CustomerDashboardController::class,'wishlist'])->name('customer.dashboard.wishlist');
+    Route::get('/customer/dashboard/order',[CustomerDashboardController::class,'order'])->name('customer.dashboard.order');
+    Route::get('/customer/dashboard/changePassword',[CustomerDashboardController::class,'changePassword'])->name('customer.dashboard.change-password');
+    Route::get('/customer/dashboard',[CustomerAuthController::class,'dashboard'])->name('customer.dashboard');
+});
 
 Route::get('/all-blogs',[BlogController::class,'index'])->name('blog.index');
 

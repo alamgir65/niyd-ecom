@@ -72,7 +72,7 @@
                         <div class="account_form register">
                             <h2 class="text-center">Register</h2>
                             <hr>
-                            <form action="{{route('customer.register')}}" method="post">
+                            <form action="{{route('checkout.new-customer')}}" method="post">
                                 @csrf
                                 <p>
                                     <label>Full Name  <span class="text-danger">*</span></label>
