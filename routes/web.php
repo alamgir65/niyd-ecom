@@ -20,6 +20,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\CustomerDashboardController;
 
 Route::get('/',[WebsiteController::class,'index'])->name('home');
+Route::get('/search-product-by-user-input',[WebsiteController::class,'ajaxSearchProduct'])->name('search-product-by-user-input');
 Route::get('/contact-us',[WebsiteController::class,'contact'])->name('contact');
 Route::get('/about-us',[WebsiteController::class,'about'])->name('about');
 Route::get('/product-category/{id}',[WebsiteController::class,'category'])->name('product-category');

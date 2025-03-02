@@ -41,5 +41,14 @@ class WebsiteController extends Controller
         return view('website.home.about');
     }
 
+    public function ajaxSearchProduct(){
+        $givenText = $_GET['given_text'];
+        $products = Product::where('name','like','%'.$givenText.'%')->latest()->get();
+        foreach ($products as $product){
+            $product->image = asset($product->image);
+        }
+        return response()->json($products);
+    }
+
 }
 

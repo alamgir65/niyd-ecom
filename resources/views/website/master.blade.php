@@ -109,7 +109,7 @@
                                     </select>
                                 </div>
                                 <div class="search_box">
-                                    <input placeholder="Search product..." type="text">
+                                    <input id="searchInput" placeholder="Search product..." type="text">
                                     <button type="submit"><i class="zmdi zmdi-search"></i></button>
                                 </div>
                             </form>
@@ -471,8 +471,9 @@
     </div>
 </div>
 <!--Offcanvas menu area end-->
-
-@yield('body')
+<div id="bodyRes">
+    @yield('body')
+</div>
 
 <!--footer area start-->
 <footer class="footer_widgets">
@@ -813,6 +814,44 @@
 <!-- Main JS -->
 <script src="{{asset('/')}}website/js/main.js"></script>
 
+<script>
+    $('#searchInput').keyup(function(){
+        var searchInput = $(this).val();
+        $.ajax({
+            type: "GET",
+            url: "{{route('search-product-by-user-input')}}",
+            data: {given_text: searchInput},
+            dataType: "JSON",
+            success: function(response){
+                console.log(response);
+
+                var data = '';
+                    data += '<section class="py-5">';
+                        data += '<div class="container>';
+                            data += '<div class="row">';
+                            $.each(response , function (key,value) {
+                                data += '<div class="col-md-4">';
+                                    data += '<div class="card">';
+                                        data += '<img src="'+value.image+'" alt=""/>';
+                                        data += '<div class="card-body">';
+                                            data += '<h3>'+value.name+'</h3>';
+                                            data += '<h5>'+value.selling_price+'</h5>';
+                                            data += '<a href="" class="btn btn-success">Details</a>';
+                                        data += '</div>';
+                                    data += '</div>';
+                                data += '</div>';
+                            });
+                            data += '</div>';
+                        data += '</div>';
+                    data += '</section>';
+
+                $('#bodyRes').empty();
+                $('#bodyRes').append(data);
+
+            }
+        });
+    })
+</script>
 
 
 </body>
